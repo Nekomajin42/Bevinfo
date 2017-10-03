@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Adatok kezelése</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Adatok kezelése</h1>
+				<p>Az informatika egy tudományág, ami az adatok feldolgozásával és az adatokból kinyerhető információ kezelésével foglalkozik. Manapság az informatika szó szorosan összefügg a számítógépek használatával, és ebben a fejezetben mi is ebből a szemszögből közelítjük meg az adathoz kapcsolódó ismereteket.</p>
+			</header>
+			<section>
+				<h2>Adat és információ</h2>
+				<p><strong>Adatnak</strong> nevezzük egy objektum egy tulajdonságának állapotát. Vegyük egyszerű példának az embert! Minden ember egy önálló objektum, aki tulajdonságokkal rendelkezik. Mindenkinek van magassága, hajszíne, neve, életkora, stb. Ezeknek a tulajdonságoknak az értékét nevezzük adatnak.</p>
+				<p>Az <strong>információ</strong> az adathoz társított jelentés. Ebből két dolog következik. Egyrészt ugyanaz az adat két különböző személynek nem biztos, hogy ugyanazt az információt hordozza. Az előző példánál maradva, a "Tamás" név egy adat. Ez az adat viszont nem ugyanazt az információt jelenti Andinak, aki szerelmes Tamásba, és Bélának, aki Tamás ellenfele volt a focimeccsen.</p>
+				<p>Másrészt lehet, hogy ugyanaz az adat az egyik személy számára hordoz információt, a másik számára viszont nem. Ha Dénes nem ismeri Tamást, akkor számára az az adat, hogy Tamás milyen magas, nem információ.</p>
+			</section>
+			<section>
+				<h2>Adatmennyiségek</h2>
+				<p>A Neumann-elvek alapján tudjuk, hogy a számítógép kettes számrendszerben működik. Ez azt jelenti, hogy az adatok feldolgozását, tárolását és továbbítását is kettes számrendszerbeli számokra alakítva végzi.</p>
+				<p>Az informatikában <strong>az adat legkisebb mértékegysége a bit.</strong> A bit szó az angol <em>binary digit</em>, magyarul kettes számrendszerbeli számjegy kifejezés rövidítése. Mivel a kettes számrendszerben összesen kétféle számjegyünk van, így a bit értéke is csak 0 vagy 1 lehet.</p>
+				<section>
+					<h3>Átváltás</h3>
+					<p>A bit manapság használt legkisebb többszöröse a <strong>byte</strong> (kiejtés: bájt). A bit rövidítése a kis "b" betű, a byte rövidítése a nagy "B" betű. A történlem során több váltószám is létezett, de végül az <span class="code">1 byte = 8 bit</span> vált szabványossá. Emelett a bitnek léteznek más többszörösei is, például a nibble (4 bit), a blokk vagy a lap (ezek mérete rendszerenként eltérő), de ezeket a hétköznapi életben nem szoktuk használni.</p>
+					<figure>
+						<table class="figure">
+							<tr>
+								<th class="align-center border-bottom">Érték</th>
+								<th class="align-center border-bottom">Előtag</th>
+								<th class="align-center border-bottom border-right">Rövidítés</th>
+								<th class="align-center border-bottom">Érték</th>
+								<th class="align-center border-bottom">Előtag</th>
+								<th class="align-center border-bottom">Rövidítés</th>
+							</tr>
+							<tr>
+								<td>1000<sup>0</td>
+								<td>-</td>
+								<td class="border-right">b / B</td>
+								<td>1024<sup>0</td>
+								<td>-</td>
+								<td>b / B</td>
+							</tr>
+							<tr>
+								<td>1000<sup>1</td>
+								<td>kilo-</td>
+								<td class="border-right">kb / kB</td>
+								<td>1024<sup>1</td>
+								<td>kibi-</td>
+								<td>Kib / KiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>2</td>
+								<td>mega-</td>
+								<td class="border-right">Mb / MB</td>
+								<td>1024<sup>2</td>
+								<td>mebi-</td>
+								<td>Mib / MiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>3</td>
+								<td>giga-</td>
+								<td class="border-right">Gb / GB</td>
+								<td>1024<sup>3</td>
+								<td>gibi-</td>
+								<td>Gib / GiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>4</td>
+								<td>tera-</td>
+								<td class="border-right">Tb / TB</td>
+								<td>1024<sup>4</td>
+								<td>tebi-</td>
+								<td>Tib / TiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>5</td>
+								<td>peta-</td>
+								<td class="border-right">Pb / PB</td>
+								<td>1024<sup>5</td>
+								<td>pebi-</td>
+								<td>Pib / PiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>6</td>
+								<td>exa-</td>
+								<td class="border-right">Eb / EB</td>
+								<td>1024<sup>6</td>
+								<td>exbi-</td>
+								<td>Eib / EiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>7</td>
+								<td>zetta-</td>
+								<td class="border-right">Zb / ZB</td>
+								<td>1024<sup>7</td>
+								<td>zebi-</td>
+								<td>Zib / ZiB</td>
+							</tr>
+							<tr>
+								<td>1000<sup>8</td>
+								<td>yotta-</td>
+								<td class="border-right">Yb / YB</td>
+								<td>1024<sup>8</td>
+								<td>yobi-</td>
+								<td>Yib / YiB</td>
+							</tr>
+						</table>
+						<figcaption>Az adatmennyiségeknél használatos előtagok tízes (balra) és kettes (jobbra) számrendszerben</figcaption>
+					</figure>
+					<p>A bit és a byte viszont nagyon kicsi mennyiségek. Kevés olyan adat van, amit 1 bit vagy 1 byte adatmennyiséggel le tudunk írni. Szükségessé vált, hogy ezek többszöröseinek is nevet adjunk, ahogy azt például a tömeg vagy a távolság esetén is tesszük. Kézenfekvő volt az <a href="https://hu.wikipedia.org/wiki/SI_mértékegységrendszer#Prefixumok" target="_blank">SI mértékegységek előtagjait</a> használni, így létrejött a kilobyte (1024 byte), a megabyte (1024 kilobyte) és a többi adatmennyiség. A választás azért esett az 1024-re, mert az a 2 tizedik hatványa, így a kettes számrendszerben kerek számnak minősül.</p>
+					<p>A látszólag jól működő megoldással azonban van egy jelentős probléma. Az SI előtagok a tíz hatványai, ebben az esetben viszont a kettő hatványaként használjuk őket. A kilo- előtag jelentése 10<sup>3</sup>, de az adatmennyiségek esetében 2<sup>10</sup> értelemben használjuk. Az eltérés kicsi, mindössze 24 (2,3%), de nagyobb előtagok esetén az eltérés is növekszik.</p>
+					<p>A probléma megoldására létrehoztak egy másik előtag rendszert, ami hasonlít az SI előtagokra, de kettes számrendszerben értelmezhető. Ezek az előtagok viszont a köznapi beszédben nem terjedtek el, még manapság is a félrevezető SI előtagokat használjuk. A hétköznapokban ez nem jelent különösebb problémát, de mégis érdemes rá odafigyelni a félreértések elkerülése végett.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Az adatok kezelése</h2>
+				<section>
+					<h3>Tárolás</h3>
+				</section>
+				<section>
+					<h3>Feldolgozás</h3>
+				</section>
+				<section>
+					<h3>Továbbítás</h3>
+				</section>
+			</section>
+		</article>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Neumann-elvek a számítógép felépítésében és működésében</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Neumann-elvek a számítógép felépítésében és működésében</h1>
+				<p><span class="name">Neumann János</span> (1903&ndash;1957) magyar születésű matematikus és vegyész. Iskoláit Magyarországon, Németországban és Svájcban végezte. 1930-tól az Egyesült Államokban tanított és kutatott. Maradandód alkotott többek között a matematika, a közgazdaságtan és a számítástechnika területén is.</p>
+				<p>Az 1945 nyarán írt <em>First Draft of a Report on the EDVAC</em> című dokumentumban lefektette a modern számítógép felépítésének és működésének alapelveit. Munkássága olyan jelentős volt, hogy a mai napig alapvetésnek számít a számítógépek tervezésében. Ebben a fejezetben azt tekintjük át, hogy Neumann meglátásai hogyan jellennek meg az informatikában a 21. század elején.</p>
+			</header>
+			<section>
+				<h2>A számítógép felépítése</h2>
+				<section>
+					<h3>Az első Neumann-elvű gépek</h3>
+					<figure>
+						<img src="schema-initial.svg" alt="Régi felépítés" />
+						<figcaption>A Neumann-elvű számítógép felépítése</figcaption>
+					</figure>
+					<p>Neumann elképzelése szerint a számítógép összetevőit három csoportba lehet elkülöníteni.</p>
+					<ol>
+						<li>A <strong>központi egység</strong> (mai nevén processzor) felelős a számítógép működtetéséért. A <strong>vezérlőegység</strong> feldolgozza a programok utasításait, az <strong>aritmetikai és logikai egység</strong> pedig végrehajtja a matematikai és logikai műveleteket.</li>
+						<li>Az <strong>operatív tár</strong> (mai nevén memória) tartalmazza az éppen futó programok utasításait és az éppen használatban lévő adatokat. A központi egység innen olvassa ki a következő utasítást, és ide írja a számítások eredményét. Ha a számítógép áramellátása megszűnik, az opratív tár tartalma törlődik.</li>
+						<li>A <strong>ki- és bemeneti egységek</strong> (mai nevén perifériák) teremtik meg a kapcsolatot a felhasználó és a számítógép között. Lehetőséget adnak az utasítások és adatok bevitelére, valamint megjelenítik a számítások eredményét.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>A modern számítógépek</h3>
+					<figure>
+						<img src="schema-modern.svg" alt="Modern felépítés" />
+						<figcaption>Egy mai modern számítógép felépítése</figcaption>
+					</figure>
+					<p>A <em>First Draft</em> megírása óta eltelt több, mint 70 évben a számítógépek felépítése sokat változott, de alapjaiban hasonló maradt. Néhány jelentős változás:</p>
+					<ul>
+						<li>Az összetevők között megjelent egy negyedik csoport, a <strong>háttértárak</strong>. Ezek feladata a nagymennyiségű adatok hosszútávú tárolása akkor is, ha a számítógép nincs áram alatt. A háttértárakat közvetlenül vagy valamilyen író/olvasó egység segítségével csatlakoztathatjuk.</li>
+						<li>Jelentősen megnövekedett a perifériák száma és fajtája. A kezdeti szöveges be- és kiviteli egységek mellett elterjedtek az audiovizuális perifériák (hang és kép) és a különféle mutatóeszközök (egér, touchpad, stb.).</li>
+						<li>Megjelentek olyan vezérlőchipek és társprocesszorok, amik a központi egységet tehermentesítik különféle feladatok alól. Ezek az egységek (főként grafikus, hang és hálózati vezérlők) eleinte bővítőkártyák formájában kerültek piacra. Később, ahogy egyre fontosabbak lettek a mindennapi használatban, a gyártók az alaplapra forrasztották őket. Az utóbbi években pedig egyre több vezérlőt építenek be közvetlenül a processzorba, ezzel is növelve a számítógép adatfeldolgozó sebességét.</li>
+						<li>A központi egység az operatív tártól függetlenül kapott egy gyorsítótárnak nevezett memóriát. Ez ugyan kis méretű, de a benne tárolt utasítások és adatok gyorsabban elérhetők, mintha az operatív tárban lennének.</li>
+						<li>Elterjedtek a többmagos központi egységek. Ezek egy lapkára épített különálló processzorok, amik szorosan együttműködve tovább javítják a számítógép teljesítményét. A magok lehetnek egyenrangúak vagy eltérőek. Az utóbbi főleg a hordozható eszközökben jelent előnyt. A gyengébb mag kisebb számítási teljesítménnyel bír, de cserébe kevesebb áramot fogyaszt, mint az erősebb mag.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>A számítógép működése</h2>
+				<section>
+					<h3>A Neumann-elvek</h3>
+					<p>A <em>First Draftban</em> Neumann részletesen írt arról is, hogy a számítógépnek hogyan kell működni ahhoz, hogy gyorsan és hatékonyan lehessen velük az adatokat feldolgozni. Ezek egy része manapság megmosolyogtató lehet, de a 40-es években még nem voltak ennyire egyértelműek. A fő megállapítások a következők:</p>
+					<ol>
+						<li><strong>A számítógép teljesen elektronikus működésű.</strong> A 19. században és a 20. század elején ugyanis sokan kísérleteztek mechanikus gépekkel. Az elektronikus központi egység és operatív tár azonban gyorsabb, kisebb és kevésbé sérülékeny, mint a mechanikus megoldások. A mozgó alkatrészeket ugyan nem lehet teljesen kizárni, de a fejlődés abba az irányba tart, hogy ezek száma csökkenjen. Jó példa erre az úgynevezett flashmemóriák sikere, amik nemcsak a szalagos, de lassan a lemezes háttértárakat is kiszorítják.</li>
+						<li><strong>A számítógép kettes számrendszerben működik.</strong> Azaz minden adatot és utasítást bitsorozatok (egyesek és nullák) formájában kezel. A mindössze kétféle érték nemcsak a feldolgozást, hanem a tárolást és a továbbítást is megkönnyíti, ugyanis könnyű mérni, hogy az áramkör egy adott pontján egy időpillanatban éppen van jel (1), vagy nincs (0).</li>
+						<li><strong>A számítógép univerzális működésű.</strong> Nemcsak egy adott feladatot tud elvégezni, hanem beprogramozható különféle feladatok elvégzésére. <span class="name">Alan Turing</span> (Neumann kortársa) elmélete szerint ha egy gép el tud végezni néhány alapműveletet (pl.: összeadás, összehasonlítás, másolás), akkor bármilyen bonyolult problémát meg tud oldani. A programozó feladata az, hogy a problémát alapműveletekre bontsa, amiket a számítógép elvégez, és a folyamat végén megszületik a bonyolult számítás eredménye.</li>
+						<li><strong>A számítógép a tárolt program elvén működik.</strong> Az éppen futó programok utasításait és az éppen használatban lévő adatokat egy közös tárban (memória) kezeli. Így automatikusan be tudja tölteni a következő utasítást, és ideiglenesen tárolni tudja a számítások közben keletkező részeredményeket is. Ezek következtében kevesebb felhasználói beavatkozásra van szükség, és a számítási sebesség jelentősen megnövekszik.</li>
+						<li><strong>A számítógép az utasításokat sorban hajtja végre.</strong> A központi egység egyszerre egy utasítást olvas ki a memóriából, az adatokat pedig bitenként dolgozza fel. Ez az elv a többmagos processzorok korában úgy módosult, hogy a magok továbbra is sorosan működnek, viszont egymástól függetlenül egyszerre különböző programokat is futtathatnak, így a központi egység párhuzamosan több feladatot is végezhet.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>A jövő</h3>
+					<p>A Neumann-elveken működő gépek megjelenése óta folynak olyan kutatások, amik kisebb-nagyobb mértékben eltérő felépítésű és/vagy működésű gépek létrehozására törekednek. Van olyan, ami a kettes számrendszer használatát változtatja meg, és olyan is, ami az utasítások és adatok kezelését párhuzamosan oldja meg. Ezek azonban a gyakorlatban nem, vagy csak korlátozottan működnek, így jelenleg nem tekinthetők univerzális alternatívának.</p>
+				</section>
+			</section>
+		</article>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

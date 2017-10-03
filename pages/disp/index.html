@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kijelzők</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Kijelzők</h1>
+				<p>A kijelző, más néven monitor vagy képernyő, a modern számítógép elsődleges kimeneti perifériája.</p>
+			</header>
+			<section>
+				<h2>Jellemzők</h2>
+				<section>
+					<h3>Méret</h3>
+					<figure>
+						<img src="size.svg" alt="Méret" />
+						<figcaption>Egy 16:9-es képarányú kijelző méretei</figcaption>
+					</figure>
+					<p>Egy monitor legszembetűnőbb jellemzője a mérete. Ezt két tulajdonság határozza meg: a képátló és a képarány. A <strong>képátló</strong> mértékegysége a centiméter vagy az angolszász inch (1 inch = 2,54 cm).</p>
+					<p>A <strong>képarány</strong> a kijelző szélességének és magasságának hányadosa. Manapság a legelterjedtebb a 4:3-as és a 16:9-es képarány. Ez utóbbi azt jelenti, hogy a képernyőt 16 egyforma szélességű oszlopra, és 9 ugyanolyan magasságú sorra tudjuk felosztani.</p>
+				</section>
+				<section>
+					<h3>Képminőség</h3>
+					<figure>
+						<table class="figure">
+							<tr>
+								<th class="border-bottom">Név</th>
+								<th class="border-bottom">Felbontás</th>
+								<th class="border-bottom">Megapixel</th>
+								<th class="border-bottom">Képarány</th>
+							</tr>
+							<tr>
+								<td>VGA (SD)</td>
+								<td>640×480</td>
+								<td>~0,3 MP</td>
+								<td>4:3</td>
+							</tr>
+							<tr>
+								<td>WVGA</td>
+								<td>800×480</td>
+								<td>~0,4 MP</td>
+								<td>5:3</td>
+							</tr>
+							<tr>
+								<td>XGA</td>
+								<td>1024×768</td>
+								<td>~0,8 MP</td>
+								<td>4:3</td>
+							</tr>
+							<tr>
+								<td>WXGA</td>
+								<td>1366×768</td>
+								<td>~1,0 MP</td>
+								<td>16:9</td>
+							</tr>
+							<tr>
+								<td>HD</td>
+								<td>1280×720</td>
+								<td>~0,9 MP</td>
+								<td>16:9</td>
+							</tr>
+							<tr>
+								<td>FHD</td>
+								<td>1920×1080</td>
+								<td>~2,0 MP</td>
+								<td>16:9</td>
+							</tr>
+							<tr>
+								<td>QHD</td>
+								<td>2560×1440</td>
+								<td>~3,7 MP</td>
+								<td>16:9</td>
+							</tr>
+							<tr>
+								<td>4K UHD</td>
+								<td>3840×2160</td>
+								<td>~8,3 MP</td>
+								<td>16:9</td>
+							</tr>
+						</table>
+						<figcaption>Néhány gyakori kijelző felbontás</figcaption>
+					</figure>
+					<p>A képminőséget több tényező is befolyásolja. A <strong>felbontás</strong> határozza meg a kép részletességét. A vízszintesen és függőlegesen elhelyezkedő pixelek számának szorzatával szoktuk megadni. A nagyobb felbontás viszont nem jelent automatikusan jobb képminőséget, hiszen a pixelek mérete változó lehet. Két azonos felbontású, de eltérő képátlójú kijelző közül a kisebb méretűnek lesz jobb a képminősége, hiszen kisebb területen tartalmaz ugyanannyi pixelt. Ez a tulajdonság a <strong>pixelsűrűség</strong>. Mértékegysége a PPI (Pixels Per Inch).</p>
+					<p>A felbontást megadhatjuk a szorzat eredményével is. Mértékegysége a megapixel (mega = 1 millió), és gyakorlatilag a képernyő területét jelenti. Ezt a formát viszont a kijelzők esetében ritkán használjuk, mert nem lehet belőle következtetni a képarányra.</p>
+					<aside>A pixel, magyarul képpont a kijelzők elemi alkotóegysége. A legkisebb olyan egység, aminek önállóan meg tudjuk változtatni a színét.</aside>
+					<p>Fontos tulajdonság a <strong>színmélység</strong>, ami azt jelenti, hogy a képernyő hány különböző színárnyalatot tud megjeleníteni. A manapság használt kijelzők többnyire az RGB színskálát használják. Minden pixel három különböző színű &ndash; vörös (red), zöld (green) és kék (blue) &ndash; alpixelből tevődik össze. Ezek árnyalataiból keveri ki a monitor az adott pixel színét. Az a monitor, ami az alpixelek árnyalatát 8 biten szabályozza, összesen ~16,8 millió különböző színárnyalatot tud megjeleníteni. (<span class="code">3×8 bit = 24 bit = 2<sup>24</sup> = 16 777 216</span> lehetőség.)</p>
+					<p>Az emberi szem ennél jelentősen kevesebb színárnyalatot tud megkülönböztetni. (A kutatók 1 és 10 millió közé teszik.) Mégis, az utóbbi években egyre inkább terjed a 10 vagy annál több bites skála az alpixelek színének szabályozására. (<span class="code">3×10 bit = 30 bit = 2<sup>30</sup> = 1 073 741 824</span> lehetőség.) Erre azért van szükség, mert a képernyő és a rajta megjelenített kép felbontása sokszor különbözik. Ilyen esetben a képet fel kell nagytani vagy le kell kicsinyíteni. Mindkét eset azzal jár, hogy a kép pixeleinek eredeti színét újra kell számolni. Minél részletesebb színskálából lehet választani, az újraszámolt szín annál inkább hasonlít majd az eredetire, vagyis annál kevésbé romlik a kép minősége.</p>
+					<p>A <strong>kontrasztarány</strong> határozza meg a kép élességét. Minél nagyobb, a fekete annál feketébb, a fehér pedig annál fehérebb. Ugyanaz a kép egy alacsony kontrasztarányú kijelzőn fakóbb, egy magasabb kontrasztarányún élénkebb lesz. Fontos tényező a <strong>betekintési szög</strong>, ami azt határozza meg, hogy a képernyő középpontjától mennyire tudunk elhajolni anélkül, hogy a színek és a kontraszt torzulnának.</p>
+					<p>A <strong>képfrissítési frekvencia</strong> azt jelenti, hogy a képernyő hány képkockát tud kirajzolni egy másodperc alatt. Mértékegysége a képkocka per másodperc (frames per second) vagy a hertz (1 Hz = 1 fps). A <strong>válaszidő</strong> azt jelenti, hogy a kijelző milyen gyorsan tudja megváltoztatni a pixelek színét. Mértékegysége az ezredmásodperc (ms). Minél kisebb a válaszidő és minél nagyobb a képfrissítési frekvencia, annál dinamikusabb a mozgókép. Magas válaszidő esetén a kép elmosódhat, alacsony képfrissítési frekvencia esetén a mozgókép szaggatottan jelenhet meg.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Technológiák</h2>
+				<p>Bár ránézésre a legtöbb kijelző egyformának a tűnik, a háttérben mégis számos különböző technológia rejtőzhet. Az alábbiakban ezek működését, valamit előnyeit és hátrányait nézzük meg.</p>
+				<section>
+					<h3>CRT</h3>
+					<p>Külsőleg leginkább a katódsugárcsöves (Cathode Ray Tube) monitorok különböznek a többitől. Ezeket a régi, "nagyhátú" eszközöket manapság már ritkán használjuk. Így is szép kort éltek meg, hiszen az első ilyen készülékeket még az 1930-as években kezdték forgalmazni.</p>
+					<p>A technológia lelke a katódsugárcső, ami célzott elektronokkal bombázza az elé helyezett, foszfortartalmú anyaggal bevont üvegbúrát. Amikor egy elektron becsapódik a búrába, a helyén egy pillanatra felvillan a képernyő. A katódsugárcső sorról sorra haladva rajzolja ki így a képkockát, majd a képernyő tetejére célozva kezdi újra a következőt.</p>
+					<p>Bár a CRT monitorok igen jelentős fejlődésen mentek keresztül az elmúlt évtizedekben, mégis minden fent említett tulajdonságban alacsony vagy közepes szintet mutatnak. Ráadásul a technológia miatt jellemző rájuk, hogy még magas képfrissítési frekvencia mellett is villognak, ami hosszú távon káros a szemnek.</p>
+				</section>
+				<section>
+					<h3>LCD</h3>
+					<p>A folyadékkristályos kijelző (Liquid-Crystal Display) önmagában is egy gyűjtőfogalom, ami számos különböző minőségű kijelző technológiát foglal magában. A közös bennük a folyadékkristály réteg, aminek a fényáteresztő képességét elektromos árammal szabályozni lehet. Feszültség határása a kristályok elmozdulnak egymáshoz képest, és több vagy kevesebb fényt engednek át a háttérvilágításból. Az áthatoló fényt ezután egy színszűrő rétegen vezetik keresztül, ami pixelenként szabályozni tudja a kijelzőből kilépő fény színét.</p>
+					<p>Az 1970-es évek óta az LCD technológia is sokat fejlődött a képminőség terén. Manapság három elterjedt megoldással találkozhatunk leginkább. A <strong>TN</strong> LCD-kre jellemző az alacsony válaszidő és a magas képfrissítési frekvencia, viszont a kontrasztarány és a betekintési szög sokszor alacsony. Az <strong>IPS</strong> LCD-kre jellemző a nagy színmélység és betekintési szög, viszont a válaszidő magasabb, a képfrissítési frekvencia pedig általában alacsonyabb. A <strong>VA</strong> LCD-k valahol a TN és az IPS között helyezkednek el a tulajdonságok tekintetében, így általános felhasználásra jelenleg a legjobb kompromisszumot nyújtják.</p>
+					<p>Ugyanakkor bármelyik típust is választjuk, a CRT-khez képest jobb képminőséget kapunk, miközben az LCD kevesebb áramot fogyaszt, kevésbé terheli a szemet, és kevesebb környezetkárosító anyagot tartalmaz.</p>
+				</section>
+				<section>
+					<h3>Plazma</h3>
+					<p>A plazma kijelzők térhódítása az 1990-es években kezdődött, de a 2010-es évek közepén be is fejeződött. Kezdetben a képminőség terén jobb tulajdonságokkal rendelkeztek, mint az LCD-k, viszont az előállításuk sokkal drágább volt, és sokkal több áramot is fogyasztottak. Ráadásul az évek során az LCD technológiák képminősége utólérte a plazma kijelzők képminőségét, így gazdasági okokból a gyártásukat leállították.</p>
+					<p>A plazma képernyők működése azon alapul, hogy a gázok elektromos feszültség hatására plazma halmazállapotba alakulnak, ahol fényt bocsájtanak ki. Az ilyen képernyőkben a pixeleket apró gázkamrák alkotják. A bennük lévő nemesgázokból képződő plazma által kibocsájtott fény színét pedig elektromos árammal lehet szabályozni.</p>
+				</section>
+				<section>
+					<h3>OLED</h3>
+					<p>A szerves világító diódát (Organic Light-Emitting Diode) használó kijelző viszonylag fiatal technológia. A hétköznapokban való terjedésének mi magunk is szemtanúi lehetünk, hiszen a 2010-es évek elején kezdtek megjelenni az első olyan hordozható eszközök, amik OLED kijelzőt használtak. A technológia az elektrolumineszcencia jelenségre épül. A kijelzőben olyan szerves molekulákat tartalmazó réteg van, ami elektromos áram hatására fényt bocsájt ki.</p>
+					<p>Az OLED kijelzőkre jellemző az alacsony válaszidő, a nagy színmélység és kontrasztarány, ezért nagyon jó minőségű képet adnak. Mivel az OLED réteg nem használ háttérvilágítást, hanem maga bocsájtja ki a fényt, ezért nagy a betekintési szög is. További előnye a többi típussal ellentétben, hogy a megjelenítő rétegeket akár rugalmas, hajlítható felületre is fel lehet vinni, így újfajta felhasználási módoknak is teret adhat. Hátránya viszont az, hogy az előállítása, főleg nagy méretben, még viszonylag drága, és a technológia még sok gyerekbetegséggel küzd.</p>
+				</section>
+				<section>
+					<h3>E-papír</h3>
+					<p>Az elektronikus papír nagymértékben különbözik az eddig felsorolt technológiáktól, ugyanis egy teljesen eltérő igényt elégít ki. A képernyőről olvasás, bármilyen jó minőségű is legyen, sokkal jobban fárasztja a szemet, mintha papírról olvasnánk. Ez elsősorban a kijelzőből érkező direkt fényre vezethető vissza. Amikor papírról olvasunk, akkor a világítótest visszaverődő fényét látjuk, ami kevésbé megerőltető a szemnek.</p>
+					<p>Az elektronikus tinta egy apró golyócskákból álló réteg az elektronikus papír belsejében. A golyók belsejében ellentétes töltésű fekete és fehér színű szemcsék vannak, amik elektromos erőtér hatására a golyó egyik vagy másik oldalára vándorolnak, és így kialakítják a képet.</p>
+					<p>Az előző bekezdésből következik, hogy az elektronikus papír elsősorban szürkeárnyalatos képet tud megjeleníteni. Bár manapság léteznek már színes e-papír kijelzők is, ezek színmélysége jelentősen elmarad az összes többi technológiától. Jellemző a magas válaszidő is, ezért mozgóképek megjelenítésére nem igazán alkalmas. Előnye viszont a nagy kontrasztarány, ami segíti az olvasást.</p>
+					<p>Van viszont még egy olyan előnye az e-papírnak, ami miatt az elmúlt években már nem csak az e-könyv olvasókban találkozhatunk vele, hanem egyre több, egészen változatos területen is. Az elektronikus tinta ugyanis képes megőrizni az állapotát akkor is, ha nincs elektromos áram alatt. Ez azt jelenti, hogy az e-papír kijelzők rendkívül alacsony fogyasztással rendelkeznek, ugyanis csak akkor van szükségük áramra, amikor megváltoztatják a képet. Emiatt egyre gyakrabban találkozunk velül okosórákban, különféle áruházi címkékben vagy éppen ékszerekben és dizájn termékekben. Egy elektronikus papírral bevont karperec mintázatát például könnyen cserélgethetjük egy egyszerű telefonos alkalmazás segítségével.</p>
+				</section>
+				<section>
+					<h3>LED</h3>
+					<p>Végül külön meg kell említeni a LED kijelzőket, ugyanis ez a megnevezés gyakran félrevezető. A boltokban sokszor látjuk a LED TV vagy LED monitor kifejezést, ám ezek a kijelzők valójában LCD-k, amik LED-eket használnak a háttérvilágítás előállításához. Valódi LED kijelzőkkel elsősorban rendezvényeken találkozhatunk több méteres LED falak formájában. Itt a képet ténylegesen LED-ek állítják elő, nem csak a folyadékkristály-réteg számára szükséges fényt biztosítják.</p>
+					<p>Mivel fizikai LED-ekből nem tudunk még elég kicsi méretűt gyártani, ezért az ilyen kijelzőkre jellemző a képátlóhoz képest nagyon alacsony felbontás. Ezek a képernyők főleg nagyobb távolságból adnak élvezhető képet.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Csatlakozók</h2>
+				<p>A számítógép és a kijelző közötti adatátvitel megvalósítására többféle csatlakozó típus is létezik. Jelenleg a legfejlettebb technológia a <strong>HDMI</strong> és a <strong>DisplayPort</strong>, mivel ezek sávszélessége elegendő a nagy felbontású kép és hang adatok átviteléhez. Könnyen lehet azonban, hogy a jövőben az <strong>USB</strong> átveszi majd a szerepüket. Mivel ezek a csatlakozók hangot is tudnak továbbítani, ezért ideálisak projektorok vagy hangszóróval egybeépített kijelzők kiszolgálására is.</p>
+				<p>Elavult technológiának számít, de még gyakran találkozhatunk a <strong>VGA</strong> és <strong>DVI</strong> csatlakozókkal. Egészn régi eszközökön láthatunk még <strong>SCART</strong> vagy <strong>S-Video</strong> csatlakozókat is.</p>
+			</section>
+		</article>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

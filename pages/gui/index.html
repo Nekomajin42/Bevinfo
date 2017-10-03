@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html dir="ltr" lang="hu">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>A grafikus felhasználói felület</title>
+		<link rel="icon" href="../_common/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="icon" href="../_common/icon.svg" sizes="any" type="image/svg+xml" />
+		<link rel="stylesheet" href="../_common/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../_common/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../_common/number.css" type="text/css" media="all" />
+	</head>
+	<body>
+		<nav>
+			<a href="../index.html">Kezdőlap</a> | <a href="../dict/index.html">Kislexikon</a> | <a href="#" onclick="window.print();">Nyomtatás...</a>
+			<hr />
+		</nav>
+		<main>
+			<h1>A grafikus felhasználói felület</h1>
+			<article>
+				<h2>Asztal</h2>
+				<p>Az asztal a grafikus felhasználói felület alapja. Ezen helyezkednek el az ablakok, ikonok, gombok és egyéb grafikus elemek.</p>
+				<section>
+					<h3>Tálca</h3>
+					<img src="tálca.svg" alt="tálca" />
+					<p>Az asztal egyik legfontosabb része a tálca, ami az alábbi elemeknek adhat helyet:</p>
+					<ol>
+						<li>A start menü gombja</li>
+						<li>Tálcára rögzített parancsikon</li>
+						<li>Megnyitott programablak gombja</li>
+						<li>Értesítési terület</li>
+					</ol>
+					<p>A tálca elhelyezkedése és tartalma az operációs rendszertől függ, és általában testreszabható. Elhelyezhetjük az ablak alján, tetején és oldalain is. A program elindítása után a rögzített parancsikon helyére a programablak gombja kerül.</p>
+					<p>Az érintőképernyőre optimalizált felhasználói felületeken a tálca általában hiányzik.</p>
+				</section>
+				<section>
+					<h3>Start menü</h3>
+					<img src="start-menü.svg" alt="start menü" />
+					<p>A start menü az operációs rendszer főmenüje. A tartalma teljes mértékben testreszabható, de sok operációs rendszer megpróbálja automatikusan a felhasználó igényeihez igazítani. A rendszerbeállítások és a telepített programok mellett általában itt találjuk a felhasználóváltás és a kikapcsolás lehetőségeit is.</p>
+				</section>
+				<section>
+					<h3>Értesítési terület</h3>
+					<img src="értesítési-terület.svg" alt="értesítési terület" />
+					<p>Az éretesítési területen különböző programok aktuális állapotát láthatjuk. Az összetétele testreszabható, és általában tartalmazza a következőket:</p>
+					<ul>
+						<li>Rendszeridő</li>
+						<li>Hálózati kapcsolatok</li>
+						<li>Hangerő</li>
+						<li>Energia ellátás</li>
+						<li>Rendszer állapot</li>
+					</ul>
+					<p>Az ikonok mellett értesítések is megjelenhetnek egy szövegbuborékhoz hasonló ablak formájában. Ezeket küldheti az operációs rendszer és a felhasználói programok is.</p>
+					<p>Ha a felhasználói felületen nincs tálca, akkor az értesítési terület általában a képernyő tetejéről nyitható meg.</p>
+				</section>
+				<section>
+					<h3>Ikonok</h3>
+					<img src="ikonok.svg" alt="ikonok" />
+					<p>Az ikonok állományokat, eszközöket és parancsokat szimbolizálnak. Az asztalra programok és dokumentumok ikonjait rögzíthetjük.</p>
+					<p>Az ikon egy speciális fajtája a parancsikon. Ebben az esetben az ikon nem ugyanabban a könyvtárban helyezkedik el, mint ahol a hozzá társított állomány. Ezt gyakran egy kis nyíl jelzi a parancsikon valamelyik sarkában, de az is lehet, hogy ugyanúgy néz ki, mint egy hagyományos ikon.</p>
+				</section>
+				<section>
+					<h3>Csempék</h3>
+					<img src="csempék.svg" alt="csempék" />
+					<p>A csempék egyszerre valósítják meg az ikonok és az értesítési terület funkcióit. Jelképezik az állományt, és kattintásra elindítják hozzájuk társított programot. Ugyanakkor egyben üzeneteket és a fájl tartalmának előnézetét is képesek megjeleníteni.</p>
+					<p>A csempéket különböző méretűre lehet állítani, így egy hagyományos ikontól egy kis méretű ablakig terjedően többféle módon tudjuk őket használni.</p>
+				</section>
+			</article>
+			<article>
+				<h2>Ablakok</h2>
+				<p>A felhasználói felületen az ablak foglalja magába az állományokhoz tartozó grafikus elemek többségét. Behatárolja az állomány által elfoglalt területet a képernyőn, és eszközöket biztosít az állomány kezeléséhez.</p>
+				<section>
+					<h3>Programablak</h3>
+					<img src="programablak.svg" alt="programablak" />
+					<p>Programablaknak nevezzük a felhasználói felületnek azt a részét, amit a futtatható állományok kezelésére hoz létre az oprációs rendszer. A programablak általában rendelkezik egy gombbal a tálcán és a következő elemekkel:</p>
+					<ol>
+						<li>Címsor</li>
+						<li>Menü/eszköztár</li>
+						<li>Kis méret gombja (a tálcára helyezi az ablakot)</li>
+						<li>Előző/teljes méret gombja</li>
+						<li>A programablak bezáró gombja</li>
+						<li>Állapotsáv</li>
+						<li>Ablakszegély</li>
+					</ol>
+					<p>A programablakot a címsoránál fogva tudjuk mozgatni, az ablakszegélynél fogva pedig átméretezni. Teljes képernyős módban viszont a címsor és az ablakszegély nem látszik.</p>
+				</section>
+				<section>
+					<h3>Dokumentumablak</h3>
+					<img src="dokumentumablak.svg" alt="dokumentumablak" />
+					<p>A programokkal általában valamilyen dokumentumot kezelünk. Minden dokumentum rendelkezik egy saját dokumentumablakkal, ami egy programablakon belül helyezkedik el. Egy programablak egy vagy több dokumentumablakot tartalmazhat. Ha többet tartalmaz, akkor a dokumentumablakokhoz általában lapfülek vannak társítva.</p>
+					<p>A dokumentumablak a következő grafikus elemekkel rendelkezik:</p>
+					<ol>
+						<li>Aktív lapfül</li>
+						<li>Inaktív lapfül</li>
+						<li>A dokumentumablak bezáró gombja</li>
+						<li>Fülsáv</li>
+						<li>Görgetősáv</li>
+					</ol>
+					<p>A görgetősávok általában csak akkor jelennek meg, ha a teljes dokumentum nem fér el a programablakban.</p>
+				</section>
+				<section>
+					<h3>Párbeszédablak</h3>
+					<img src="párbeszédablak.svg" alt="párbeszédablak" />
+					<p>A párbeszédablak egy kétirányú kommunikációs felület a program és a felhasználó között. Kétféle típusa van. Az egyik a felhasználó közbeavatkozását kéri valamilyen művelet elvégzése előtt (pl.: bezárás, törlés). Ilyenkor legalább egy <span class="button">OK</span> és egy <span class="button">Mégse</span> gomb áll a rendelkezésünkre. A másik típus beállítási lehetőségeket, űrlapelemeket tartalmaz, amik segítségével a felhasználó vezérelni tudja a programot.</p>
+					<p>A párbeszédablak a következő részekből épül fel:</p>
+					<ol>
+						<li>A párbeszédablak címsora</li>
+						<li>A párbeszédablak bezáró gombja</li>
+						<li>Űrlapelemek</li>
+					</ol>
+					<p>A párbeszédablakot a címsoránál fogva ugyanúgy tudjuk mozgatni, mint a programablakot. A tálcára tenni viszont nem tudjuk, és általában átméretezni sem lehet.</p>
+				</section>
+				<section>
+					<h3>Üzenetablak</h3>
+					<img src="üzenetablak.svg" alt="üzenetablak" />
+					<p>Az üzenetablak egy egyirányú kommunikációs felület a program és a felhasználó között. Általában az üzenet nyugtázása nélkül nem folytatható a program használata. Az üzenetablak legtöbbször csak egy <span class="button">OK</span> gombot tartalmaz.</p>
+					<p>Az üzenetablak a következő részekből épül fel:</p>
+					<ol>
+						<li>Az üzenetablak címsora</li>
+						<li>Az üzenetablak bezáró gombja</li>
+						<li>Nyugtázó gomb</li>
+					</ol>
+					<p>Az üzenetablakot a címsoránál fogva ugyanúgy tudjuk mozgatni, mint a programablakot. A tálcára tenni viszont nem tudjuk, és általában átméretezni sem lehet.</p>
+				</section>
+			</article>
+			<article>
+				<h2>Menük</h2>
+				<section>
+					<h3>Program menü</h3>
+					<img src="program-menü.svg" alt="program menü" />
+					<p>Menünek nevezzük a programban elérhető funkciók csoportosított gyűjteményét. A menüsáv általában a programablak tetején helyezkedik el.</p>
+					<p>A menü menüpontokból épül fel. A menüpontokra kattintva három dolog történhet:</p>
+					<ul>
+						<li>A program végrehajtja a menüponthoz társított utasítást.</li>
+						<li>A menüpontból egy párbeszédablak nyílik. Ezt általában a "…" karakter jelzi a menüpont címkéjének a végén.</li>
+						<li>A menüpontból egy almenü nyílik, ami újabb menüpontokat tartalmaz. Ezt általában egy jobbra mutató háromszög jelöli.</li>
+					</ul>
+					<p>Az elmúlt években gyakorivá vált, hogy a program menü helytakarékosság miatt nem menüsorban helyezkedik el, hanem egy eszköztáron elhelyezett gombra kattintva lehet elérni. A gomb gyakran használt, jellegzetes ikonja miatt gyakran nevezik ezt hamburger menünek.</p>
+				</section>
+				<section>
+					<h3>Helyi menü</h3>
+					<img src="helyi-menü.svg" alt="helyi menü" />
+					<p>A helyi menü felépítésében megegyezik a program menüvel, de a tartalma aszerint változik, hogy a felhasználói felületnek vagy a dokumentumnak melyik elemére kattintunk. A helyi menüben tehát csak azokat a funkciókat találjuk meg, amik az adott elemre érvényesek.</p>
+					<p>A helyi menüket időnként egy kis méretű eszköztárral ötvözik. Ezek a helyben megjelenő gyakran használt eszközök növelik a munkavégzés hatékonyságát.</p>
+				</section>
+			</article>
+			<article>
+				<h2>Eszköztárak</h2>
+				<section>
+					<h3>Hagyományos eszköztár</h3>
+					<img src="hagyományos-eszköztár.svg" alt="hagyományos eszköztár" />
+					<p>Az eszköztár az ablakos felhasználói felületek egyik legfontosabb eleme. A gyakran használt eszközök általában csoportosítva, gombok és lenyíló listák formájában helyezkednek el rajta. Ezekre kattintva párbeszédablakot nyithatunk, vagy a hozzájuk társított funkciót aktiválhatjuk. Időnként szöveges beviteli mezőt is találunk, amit általában keresésre használhatunk.</p>
+					<p>Az eszköztár az ablak bármelyik oldalán elhelyezkedhet, de általában a tetején található. Lehet rögzített és lebegő. A lebegő eszköztárakat az egérrel mozgatni is tudjuk.</p>
+				</section>
+				<section>
+					<h3>Szalagos eszköztár</h3>
+					<img src="szalagos-eszköztár.svg" alt="szalagos eszköztár" />
+					<p></p>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<hr />
+			v1.0 | 2016. 07. 02.
+		</footer>
+	</body>
+</html>

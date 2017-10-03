@@ -1,0 +1,250 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Szövegszerkesztés</title>
+		<link rel="icon" href="../../icons/icon16.png" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Szövegszerkesztés</h1>
+				<p>Az informatikában a szövegszerkesztés az egyik legfontosabb terület, mivel manapság a dokumentumokat a számítógép segítségével készítjük. Az itt megtanult ismeretek pedig a prezentáció-, weblap- és kiadványkészítésnél is hasznosak lesznek.</p>
+			</header>
+			<section>
+				<h2>A szövegszerkesztés lépései</h2>
+				<p>A hatékony munkához célszerű betartani az alábbi sorrendet:</p>
+				<ol>
+					<li>Tervezés és/vagy vázlatok készítése.</li>
+					<li>Az üres dokumentum létrehozása és megnyitása, vagy a szövegszerkesztő program által felkínált üres dokumentum elmentése.</li>
+					<li>A szöveg begépelése, beillesztése vagy importálása.</li>
+					<li>A helyesírási és gépelési hibák ellenőrzése és javítása.</li>
+					<li>Ha szükséges, a táblázatok és/vagy szövegdobozok létrehozása, szövegük begépelése vagy beillesztése és ellenőrzése.</li>
+					<li>A szöveg megformázása a "nagytól a kicsi felé" elv betartásával.</li>
+					<li>Ha szükséges, a szövegbe ágyazott objektumok (képek, ábrák, diagramok, stb.) beillesztése és formázása.</li>
+					<li>Az élőfej és élőláb, valamint a hivatkozások (lábjegyzetek, tartalomjegyzék, hiperhivatkozások, stb.) létrehozása.</li>
+					<li>Ellenőrzés.</li>
+				</ol>
+				<aside>Mint minden számítógéppel végzett munka során, a rendszeres mentés itt is fontos, hogy elkerüljük az adatvesztést. Érdemes minden nagyobb műveletcsoport után, néhány percenként menteni.</aside>
+			</section>
+			<section>
+				<h2>A dokumentum objektumai</h2>
+				<p>A számítógéppel készített dokumentumok különféle objektumokból állnak össze. Minden objektumnak vannak tulajdonságai, amiket meg tudunk változtatni a formázás során. Ha pedig tudjuk, hogy egy objektumnak milyen tulajdonságia vannak, akkor könnyen megtaláljuk a megfelelő eszközöket a menüben vagy az eszköztáron.</p>
+				<section>
+					<h3>Szöveges objektumok</h3>
+					<p>A szövegszerkesztő programok a szöveg jelentését nem tudják értelmezni, ezért a különböző szöveges objektumokat valamilyen egyértelmű határok alapján ismerik fel.</p>
+					<ul>
+						<li>A <strong>karakter</strong> egy önálló jelentéssel bíró szimbólum. Például:
+							<ul>
+								<li>Betűk és számjegyek</li>
+								<li>Matematikai és írásjelek</li>
+								<li>Nem nyomtatható karakterek: szóköz (&middot;), bekezdés vége jel (¶), sortörés (&crarr;), tabulátor (&#x27f6;), oldaltörés, szakasztörés, hasábtörés, stb.</li>
+								<li>Egyéb: nyilak, geometriai alakzatok, smiley-k, stb.</li>
+							</ul>
+						</li>
+						<li>A <strong>szó</strong> olyan karaktersorozat, amit két nem nyomtatható karakter, általában szóköz határol. (A karaktersorozat nem biztos, hogy értelmes, de attól a szövegszerkesztő még szóként kezeli.)</li>
+						<li>A <strong>bekezdés</strong> olyan szövegrész, amit két bekezdés vége jel (¶) határol. (Szövegszerkesztő szempontjából a címek és a felsorolások is bekezdésnek számítanak.)</li>
+						<li>A <strong>szakasz</strong> olyan szövegrész, amit két szakasztörés karakter határol. (Alapesetben a teljes szöveg egy szakaszból áll.)</li>
+					</ul>
+					<p>Speciális szöveges objektumnak számít a <strong>hivatkozás</strong> és a <strong>mező</strong>. Ezek formázás szempontjából nem különböznek a normál szöveges objektumoktól, de tartalmilag vannak plusz tulajdonságaik. A hivatkozás kattintásra a dokumentum egy másik ponjára, vagy egy másik dokumentumra visz. A mező pedig olyan objektum, aminek a szövegét a szövegszerkesztő generálja (pl.: oldalszám, felsorolás, tartalomjegyzék).</p>
+				</section>
+				<section>
+					<h3>Grafikus objektumok</h3>
+					<p>A szövegbe grafikus objektumokat (<strong>kép</strong>, <strong>alakzat</strong>, <strong>videó</strong>) is beszúrhatunk. Ezek a szöveges objektumoktól eltérő tulajdonságokkal rendelkeznek. A formázásuk egy része a képszerkesztés témakörébe tartozik.</p>
+				</section>
+				<section>
+					<h3>Szöveget tartalmazó grafikus objektumok</h3>
+					<p>Ebbe a csoportba olyan objektumok tartoznak (<strong>szövegdoboz</strong>, <strong>táblázat</strong>, <strong>diagram</strong>, <strong>űrlapelem</strong>), amik az előző két csoport tulajdonságait egyesítik. Vannak grafikus elemeik, viszont tartalmaznak szöveget is. A grafikus és szöveges részüket külön-külön lehet formázni.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Hatókör</h2>
+				<p><strong>A formázás hatóköre azt mondja meg, hogy a formázás a dokumentumnak melyik részére, melyik objektumaira lesz hatással.</strong> A szövegszerkesztés kapcsán az alábbi formázás csoportokat különböztetjük meg:</p>
+				<section>
+					<h3>Karakter formázások</h3>
+					<figure>
+						<img src="font.svg" alt="Karakter formázások" />
+						<figcaption>Talpas és talpatlan betűtípus.</figcaption>
+					</figure>
+					<p>Hatóköre a <strong>kijelölés</strong> vagy a <strong>szó</strong>. Ide tartoznak a következők:</p>
+					<ul>
+						<li>Betűtípus (talpas, talpatlan, fix szélességű)</li>
+						<li>Betűstílus (félkövér, dőlt, kiskapitális, nagybetűs, aláhúzott, alsó index, felső index, stb.)</li>
+						<li>Betűméret</li>
+						<li>Betűszín</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Bekezdés formázások</h3>
+					<figure>
+						<img src="paragraph.svg" alt="Bekezdés formázások" />
+						<figcaption>Felül: balra, középre, jobbra és sorkizárt <strong>igazítás</strong>.<br />Alul: bal oldali, jobb oldali, első sor és függő <strong>behúzás</strong>.</figcaption>
+					</figure>
+					<p>Hatóköre a <strong>bekezdés</strong>. Ide tartoznak a következők:</p>
+					<ul>
+						<li>Igazítás (balra, középre, jobbra, sorkizárt)</li>
+						<li>Behúzás (bal oldali, jobb oldali, első sor, függő)</li>
+						<li>Felsorolás (számozott, számozatlan)</li>
+						<li>Térköz</li>
+						<li>Sorköz</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Oldal formázások</h3>
+					<figure>
+						<img src="page.svg" alt="Oldal formázások" />
+						<figcaption>Álló és fekvő tájolású lap.</figcaption>
+					</figure>
+					<p>Hatóköre a <strong>szakasz</strong>. Ide tartoznak a következők:</p>
+					<ul>
+						<li>Papírméret (A4, A5, stb.)</li>
+						<li>Tájolás (álló, fekvő)</li>
+						<li>Margó</li>
+						<li>Elválasztás</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Alakzat formázások</h3>
+					<figure>
+						<img src="shape.svg" alt="Alakzat formázások" />
+						<figcaption>Méretezőszegély, rajta méretezőpontok és felül a forgatópont.</figcaption>
+					</figure>
+					<p>Hatóköre a <strong>kijelölés</strong>. Ide tartoznak a következők:</p>
+					<ul>
+						<li>Méret (szélesség, magasság)</li>
+						<li>Forgatás, tükrözés</li>
+						<li>Elhelyezés (lebegtetés, igazítás)</li>
+						<li>Szegély (stílus, vastagság, szín)</li>
+						<li>Kitöltés (szín, minta, átlátszóság)</li>
+					</ul>
+				</section>
+				<aside>Néhány formázás (pl.: szegély, kitöltés) nem csak a grafikus elemekre használható. Ebben az esetben a hatókörre mindig különösen oda kell figyelni.</aside>
+				<aside>A kijelölt részt szöveges objektum esetében eltérő (általában kék) háttérszín jelöli, grafikus objektum esetében pedig az úgynevezett méretezőszegély.</aside>
+			</section>
+			<section>
+				<h2>Általános szabályok</h2>
+				<section>
+					<h3>Szövegszerkesztés</h3>
+					<p>Az alábbi szabályokat azért érdemes betartani, hogy hatékonyan tudjunk dolgozni. Fontos szempont az is, hogy a későbbiekben a dokumentumot könnyen tudjuk szerkeszteni, módosítani.</p>
+					<ul>
+						<li>Egymás után nyomott "enterek" helyett használjunk térközt vagy oldaltörést!</li>
+						<li>Egymás után nyomott szóközöt helyett használjunk tabulátort vagy behúzást!</li>
+						<li>Egymás után nyomott tabulátorok helyett használjuk a vonalzót, méretezzük át a tabulátort!</li>
+						<li>Kézi sorszámozás helyett használjuk a szövegszerkesztő beépített funkcióit! A program szükség esetén magától újraszámozza a szövegrészeket.</li>
+						<li>Kézi elválasztás helyett használd a szövegszerkesztő beépített elválasztás funkcióját!</li>
+						<li>A formázással haladj a nagyobb egységektől a kisebb egységek felé! Így kevesebbszer kell újraformáznod egy szövegrészt.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Tipográfia</h3>
+					<p>A tipográfia a szöveg kinézetével, olvashatóságával foglalkozó tudományág. Az alábbi szabályokat azért érdemes betartani, hogy esztétikus és jól olvasható dokumentumokat hozzunk létre. Ne felejtsük el, hogy azt a szöveget valakinek el is kell majd olvasni!</p>
+					<ul>
+						<li>Nyomtatott vagy hosszabb szövegek esetén használjunk talpas betűtípust! Kivetített vagy rövid szövegek esetén használjunk talpatlan betűtípust! Egy dokumentumon belül ne használjunk sokféle különböző betűtípust!</li>
+						<li>Használjunk kontrasztos színeket! Nyomtatott dokumentumok esetén világos háttéren sötét betűt, kivetített dokumentumok esetén sötét háttéren világos betűt célszerű használni.</li>
+						<li>Ne használjunk aláhúzást! Ha mindenáron alá akarunk húzni valamit, akkor inkább alsó szegélyt alkalmazzunk!</li>
+						<li>Az átláthatóság kedvéért használjunk margót és térközt!</li>
+						<li>Hosszabb sorok és egybefüggő szövegek esetén használjunk sorkizárt igazítást és elválasztást!</li>
+						<li>A kevesebb sokszor több. Egy dokumentumon belül ne alkalmazz sokféle különböző formázást! A fontos dolgokat egyféleképpen emeljük ki!</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>A lap részei</h2>
+				<figure>
+					<img src="paper.svg" alt="A lap részei" />
+					<figcaption>Középen a <strong>szövegtükör</strong>, körülötte a <strong>margó</strong>. A margón alul és felül az <strong>élőfej</strong> és az <strong>élőláb</strong>.</figcaption>
+				</figure>
+				<p>A mellékelt ábra egy álló tájolású A4-es lapot ábrázol, de az alábbiak minden lapméretre és tájolásra, illetve képernyőn megjelenő dokumentumra (prezentáció, weblap) érvényesek.</p>
+				<section>
+					<h3>Margó és szövegtükör</h3>
+					<p>Szövegtükörnek nevezzük a lapnak azt a részét, amin a tartalom megjelenik, "amire írunk". Ezt veszi körbe a margó.</p>
+					<p>A margóra egyrészt technikai, másrészt esztétikai okokból van szükség. Manapság ugyan már léteznek olyan nyomtatók, amik képesek a papírt margó nélkül is megfogni, de ezek még nincsenek általánosan elterjedve. Ennél fontosabb viszont az, hogy a szöveg jobban átlátható, ha a sorok nem a papír szélén kezdődnek és végződnek.</p>
+					<h3>Élőfej és élőláb</h3>
+					<p>Az alsó és felső margón helyezkednek el. A tartalmuk általában oldalszámozás, cím és/vagy fejlécgrafika. "Élő" nevüket onnan kapták, hogy a tartalmuk (egy szakaszon belül) minden oldal tetején és alján ismétlődik.</p>
+					<aside>Az élőláb nem keverendő össze a lábjegyzettel. Az előbbi a lap része, az utóbbi a dokumentum egy objektuma, egy hivatkozás.</aside>
+				</section>
+			</section>
+			<section>
+				<h2>Billentyűk és kombinációk</h2>
+				<p>Az alábbi táblázatok azokat a billentyűket és kombinációkat tartalmazzák, amiket a szövegszerkesztés szempontjából fontosak. A billentyűkombinációkkal általánosságban <a href="../text/index.html" target="_blank">külön fejezet</a> foglalkozik.
+				<section>
+					<h3>Szerkesztés</h3>
+					<table class="block">
+						<tr>
+							<th>Kombináció</th>
+							<th>Jelentés</th>
+							<th>Magyarázat</th>
+						</tr>
+						<tr>
+							<td><span class="key">&crarr; Enter</span></td>
+							<td>Bekezdés vége</td>
+							<td>Új bekezdést kezd. Bekezdés vége (¶) karaktert ír.</td>
+						</tr>
+						<tr>
+							<td><span class="key">&uArr; Shift</span>+<span class="key">&crarr; Enter</span></td>
+							<td>Sortörés</td>
+							<td>Új sort kezd a bekezdésen belül. Sortörés (&crarr;) karaktert ír.</td>
+						</tr>
+						<tr>
+							<td><span class="key">Tab &#x21b9;</span></td>
+							<td>Tabulátor</td>
+							<td>Tabulátor (&#x27f6;) karaktert ír.</td>
+						</tr>
+						<tr>
+							<td><span class="key">&#x27f5; Backspace</span></td>
+							<td>Törlés</td>
+							<td>Kitörli a szövegkurzor bal oldalán álló karaktert, vagy a kijelölt szövegrészt.</td>
+						</tr>
+						<tr>
+							<td><span class="key">Delete</span></td>
+							<td>Törlés</td>
+							<td>Kitörli a szövegkurzor jobb oldalán álló karaktert, vagy a kijelölt szövegrészt.</td>
+						</tr>
+						<tr>
+							<td><span class="key">Insert</span></td>
+							<td>Felülírás/beszúrás</td>
+							<td>A szövegkurzor felülíró és beszúró működése között vált át.</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h3>Formázás</h3>
+					<table class="block">
+						<tr>
+							<th>Kombináció</th>
+							<th>Jelentés</th>
+							<th>Magyarázat</th>
+						</tr>
+						<tr>
+							<td><span class="key">Ctrl</span>+<span class="key">B</span></td>
+							<td>Félkövér</td>
+							<td>Félkövér karakterformázást alkalmaz.</td>
+						</tr>
+						<tr>
+							<td><span class="key">Ctrl</span>+<span class="key">I</span></td>
+							<td>Dőlt</td>
+							<td>Dőlt karakterformázást alkalmaz.</td>
+						</tr>
+						<tr>
+							<td><span class="key">Ctrl</span>+<span class="key">U</span></td>
+							<td>Aláhúzott</td>
+							<td>Aláhúzott karakterformázást alkalmaz.</td>
+						</tr>
+					</table>
+				</section>
+			</section>
+		</section>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

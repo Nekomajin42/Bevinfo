@@ -1,0 +1,26 @@
+article {
+counter-reset: h2;}
+
+section {
+counter-reset: h3;}
+
+section section {
+counter-reset: h4;}
+
+h2 {
+counter-increment: h2;}
+
+h2:not(.no-number)::before {
+content: counter(h2)". ";}
+
+h3 {
+counter-increment: h3;}
+
+h3:not(.no-number)::before {
+content: counter(h2)"."counter(h3)". ";}
+
+h4 {
+counter-increment: h4;}
+
+h4:not(.no-number)::before {
+content: counter(h2)"."counter(h3)"."counter(h4)". ";}
