@@ -1,0 +1,45 @@
+{
+	"dir": "ltr",
+	"lang": "hu",
+	"name": "Bevezetés a felhasználói szintű informatikába",
+	"short_name": "Bevinfó",
+	"description": "Online középszintű informatika tananyag.",
+	"start_url": "index.html",
+	"background_color": "WhiteSmoke",
+	"theme_color": "LightGrey",
+	"display": "browser",
+	"orientation": "any",
+	"icons":
+	[
+		{
+			"src": "icons/icon16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon64.png",
+			"sizes": "64x64",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon.svg",
+			"sizes": "16x16 32x32 64x64 128x128 144x144",
+			"type": "image/svg+xml"
+		}
+	]
+}
