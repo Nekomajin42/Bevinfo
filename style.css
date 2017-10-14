@@ -13,7 +13,7 @@ background-color: WhiteSmoke;}
 body {
 display: inline-block;
 margin: 0 auto 0 auto;
-width: 400px;}
+width: 200px;}
 
 @media (min-width: 420px) {
 body {
@@ -37,7 +37,8 @@ margin: 20px 0 20px 0;}
 h1 {
 margin: 20px 0 20px 0;
 font-size: 2rem;
-font-weight: normal;}
+font-weight: normal;
+line-height: 120%;}
 
 ul {
 display: inline-block;
