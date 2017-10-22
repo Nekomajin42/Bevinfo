@@ -188,6 +188,9 @@ font-weight: bold;}
 .no-break {
 white-space: nowrap;}
 
+.allow-break {
+word-break: break-all;}
+
 .float-left {
 loat: left;
 margin: 0 5px 0 0;}
@@ -259,7 +262,7 @@ display: inline-block;
 margin: 0 1px 0 1px;
 padding: 2px;
 font-family: Consolas, monospace;
-line-height: 100%;
+line-height: 120%;
 border: 1px dotted Grey;
 border-radius: 2px;}
 
