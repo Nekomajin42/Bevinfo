@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Központi egység</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Központi egység</h1>
+				<p>A Neumann-elvek alapján a központi egység és az operatív tár két különálló alkatrész, praktikus okokból azonban mégis együtt célszerű őket tárgyalni. Ebben a fejezetben azt tekintjük át, hogy hogyan fejlődött a központi egység az évtizedek során, és milyen együttműködésben áll az operatív tárral.</p>
+			</header>
+			<section>
+				<h2>Feldolgozó egységek</h2>
+				<p>A feldolgozó egység egy nagy sűrűségű integrált áramkör, amely manapság, (a számítási kapacitástól függően) több milliárd tranzisztorból épül fel. A tranzisztorok mikroszkópikus kapcsolókként viselkedve különböző matematikai és logikai áramkörökbe rendeződnek, amik egy-egy alapművelet elvégzésére képesek. Ezek mellé egy vezérlőegység és kisméretű, gyorsítótárként működő memória is társul.</p>
+				<p>A processzorok legfontosabb tulajdonsága az <strong>órajel</strong>, amely nagymértékben meghatározza, hogy az adott feldolgozó egység egy másodperc alatt hány műveletet tud elvégezni. Mértékegysége a megahertz (MHz) vagy gigahertz (GHz). Másik fontos jellemzője a <strong>fogyasztás</strong>, ami alapvetően behatárolja, hogy az egység mennyi áramot fogyaszt és mennyi hőt termel. Ezt a gyártók egy TDP <em>(Thermal Design Power)</em> értékkel szokták jelölni, aminek mértékegysége a watt (W). Az órajel és a fogyasztás között egyenes arányosság van, ezért fontos fejlesztési terület a számítási kapacitás növelése azonos, vagy még alacsonyabb fogyasztás mellett.</p>
+				<p>Egy általános célú számítógépben többféle feldolgozó egység is található. Ezek közül egy végez univerzális feladatokat, a többi ennek alárendelve valamilyen célzott feladatot lát el.</p>
+				<section>
+					<h3>Központi processzor</h3>
+					<p>A központi feldolgozó egység <em>(Central Processing Unit, CPU)</em>, hétköznapi nevén "a processzor" feladata az egész számítógép működésének összehangolása és vezérlése. A processzor végrehajtja a felhasználói programok utasításait, az adatokkal számításokat végez, és szükség esetén utasítja a társprocesszorokat a munkába való bekapcsolódásra.</p>
+				</section>
+				<section>
+					<h3>Társprocesszorok</h3>
+					<p>A segédprocesszorok feladata a központi processzor tehermentesítése. A központi processzor ugyan univerzális, programozható (lásd: Neumann-elvek), de éppen ezért a legtöbb feladatot nem tudja a lehető leghatékonyabban elvégezni. Mindenhez ért, de nem kiemelkedően. A segédprocesszorok olyan áramköröket tartalmaznak, amik általában csak egyféle feladat végrehajtását teszik lehetővé, de azt sokkal hatékonyabban, mint amire a központi processzor képes.</p>
+					<p>A társprocesszorok között manapság kiemelkedően fontos a grafikus processzor <em>(Graphical Processing Unit, GPU)</em>, hiszen a játékok és videók mellett már a felhasználói felületek is egyre több grafikai számítást igényelnek. További fontos segédprocesszorok még a hang, hálózati, memória és perifériális vezérlők.</p>
+					<p>Az említett feldolgozó egységek látványos utat jártak be, mióta az első, háztartások számára is megvásárolható számítógépek megjelentek. Eleinte különféle bővítőkártyák formájában lehetett megvásárolni őket. Az alaplap megfelelő foglalatába illesztve új képességekkel egészítették ki a számítógépeket. Az ezredforduló környékén viszont már alapvető elvárás volt a videó-, hang- és hálózati kártyák megléte, és a perifériák fejlődése is robbanásszerűen felgyorsult, ezért a társprocesszorok a bővítőkártyákról közvetlenül az alaplapokra költöztek. Manapság pedig egy újabb váltópontot élünk, amikor az alaplapra integrált vezérlők lépésről lépésre a központi processzorba költöznek. Speciális igényekhez, (pl.: játékok, zeneszerkesztés) a mai napig lehet bővítőkártyákat venni, de hétköznapi használatra az alaplapra vagy a processzorba épített megoldások is megfelelnek.</p>
+				</section>
+				<section>
+					<h3>Többmagos processzorok</h3>
+					<p>A feldolgozó egységek egy másik jelentős változáson is átestek az ezredforduló óta eltelt években. A többmagos processzorok több önállóan is működőképes feldolgozó egységet tartalmaznak, amik bizonyos összetevőkön (pl.: gyorsítótár, memória vezérlő) osztoznak. Ezáltal hatékonyabban tudnak működni, mintha ténylegesen több különálló processzor dolgozna a számítógépben. Ez a megoldás elsősorban a központi és a grafikus processzoroknál terjedt el, mert a többi társprocesszor nem igényel ilyen hatékonyságot.</p>
+					<p>A magok lehetnek egyenrangúak, ekkor homogén processzorról beszélünk. A hordozható eszközökben viszont a heterogén processzorok terjedtek el. Egyes magok nagyobb számítási teljesítménnyel rendelkeznek, cserébe több áramot fogyasztanak. Más magok gyengébbek, viszont jelentősen kevesebb árammal működnek. Amikor a például a telefon a zsebünkben van, akkor a háttérben futó programokat a gyengébb magok futtatják, így az akkumulátor lassabban merül. Amikor elindítunk egy erőforrás-igényesebb alkalmazást, akkor viszont bekapcsolnak az erősebb magok, hogy a program akadásmentesen tudjon működni.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Memória</h2>
+				<p>Az operatív tár <em>(Random Access Memory, RAM)</em>, hétköznapi nevén "a memória" feladata az, hogy a processzor által éppen futtatott programok utasításait és az éppen feldolgozás alatt álló adatokat ideiglenesen tárolja. A processzor innen olvassa be az utasításokat és az adatokat, és ide írja az eredményeket. Azt a programot vagy adatot, ami nincs a memóriában, először be kell oda másolni a háttértárról, hogy a processzor dolgozni tudjon vele.</p>
+				<p>A manapság használt DRAM technológia kondenzátorokból álló integrált áramkört tartalmaz. A kondenzátorok képesek ideiglenesen tárolni az elektromos töltést, és így a bináris adatot. (Van töltés: 1, nincs töltés: 0.) Ez nagyon gyors írást és olvasást tesz lehetővé, viszont a kondenzátorok hamar elveszítik a töltésüket, ha megszűnik az elektromos áram, és ilyenkor a memória tartalma törlődik. Az operatív tár tehát a flash memóriákkal ellentétben úgynevezett <strong>felejtő memória</strong>.</p>
+				<p>Működési szempontból a memóriát leginkább egy hatalmas fiókos szekrényként tudjuk elképzelni. Minden fiók pontosan egy byte adat tárolására képes. Egy 1 gigabyte-os modul kicsivel több, mint 1 milliárd ilyen fiókkal rendelkezik (<span class="code">2<sup>30</sup> = 1073741824</span>). A közvetlen elérés <em>(random access)</em> pedig azt jelenti, hogy minden fiók saját, egyedi sorszámmal rendelkezik, így a processzor megtalálja a kívánt memória rekeszt anélkül, hogy az összes tartalmát egyesével meg kellene vizsgálni. (Mint ahogyan a postás is tudja a házszám alapján, hogy hová kell vinni a levelet, és nem kell neki minden lakásba becsengetni, és a házigazdát megkérdezni, hogy jó helyre jött-e.)</p>
+			</section>
+			<section>
+				<h2>Összegzés</h2>
+				<p>A központi egység felépítése és fejlettsége tehát alapvetően meghatározza egy számítógép "sebességét". A memória tárkapacitása és a processzor műveletvégzési sebessége együttesen gyorsabb és hatékonyabb működést tesz lehetővé. A segédprocesszorok integráltsága optimálisabb adatfeldogozást és ezzel együtt alacsonyabb fogyasztást jelenthet.</p>
+			</section>
+		</article>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

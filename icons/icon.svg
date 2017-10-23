@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="icon.svg"
-   inkscape:export-filename="F:\Web\_tananyag\icons\icon16.png"
-   inkscape:export-xdpi="11.25"
-   inkscape:export-ydpi="11.25">
+   inkscape:export-filename="F:\Web\_tananyag\icons\icon144.png"
+   inkscape:export-xdpi="101.25"
+   inkscape:export-ydpi="101.25">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.1484375"
-     inkscape:cx="64"
-     inkscape:cy="64"
+     inkscape:cx="22.900188"
+     inkscape:cy="63.758945"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -63,7 +63,7 @@
      id="layer1"
      transform="translate(0,-924.36216)">
     <rect
-       style="opacity:1;fill:#d3d3d3;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4136"
        width="128"
        height="128"
