@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hálózatok</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Hálózatok</h1>
+				<p>Számítógépes hálózatnak két vagy több egymással összeköttetésben álló számítógépet nevezünk.</p>
+			</header>
+			<section>
+				<h2>A hálózatok felépítése</h2>
+				<p>A számítógépek közötti kapcsolat kialakítása sok különféle problémát vet fel. Ezek megoldására többféle technológiai leírás is létezik, amik közös tulajdonsága, hogy a feladatokat egymásra épülő rétegekre osztják. A legismertebb ezek közül az elméleti OSI modell és a gyakorlatban használt TCP/IP modell. Ebben a fejezetben viszont a könnyebb érthetőség kedvéért a jelentősebb feladatok szerint vesszük sorra egy hálózat kialakításának lépéseit.</p>
+				<section>
+					<h3>Összeköttetés</h3>
+					<p>Két számítógép összekötéséhez valamilyen fizikai kapcsolat szükséges. Erre többféle megoldást használunk.</p>
+					<p><strong>Vezetékes</strong> kapcsolat esetén a közvetítő közeg készülhet fémből (általában réz) és üvegből. Fémkábel esetén gyenge elektromos áramot, üvegszálas kábel esetén pedig infravörös fényt használunk az adatok továbbítására. Az üvegszálas kábel kevésbé sérülékeny, és gyorsabb adatátvitelt tesz lehetővé, a fémkábel viszont jelentősen olcsóbb, és könnyebben javítható.</p>
+					<p><strong>Vezeték nélküli</strong> kapcsolatnál a közvetítő közeg a levegő. Ebben az esetben az adatcsomagok továbbítására rádióhullámokat vagy ritkábban infravörös fényt használunk. Az infravörös fény hátránya, hogy az adóegységnek pontosan a vevőegységre kell célozni. A rádióhullámok viszont a falakról és egyéb tereptárgyakról visszaverődve akár takarásból is képesek célba jutni.</p>
+					<p>Bármelyiket is választjuk, nagyobb távolság vagy erősebb takarás esetén szükség lehet jelerősítő <em>(repeater)</em> használatára. A számítógépben természetes lenni kell valamilyen adó-vevő egységnek, hálózati vezérlőnek. Ez lehet a processzorba vagy az alaplapra integrálva, de alkothat különálló bővítőkártyát is. A számítógép számára érhető digitális és a hálózaton közlekedő analóg jelek közötti átalakítást pedig a modem <em>(modulator-demodulator)</em> végzi.</p>
+				</section>
+				<section>
+					<h3>Címzés</h3>
+					<p>Ha kettőnél több számítógépet akarunk összekötni, akkor mindegyiket el kell nevezni, címet kell nekik adni.</p>
+					<h4>Fizikai cím</h4>
+					<p>A hálózati eszköz fizikai, vagy más néven MAC címét <em>(Media Access Control)</em> a gyártó állítja be. Ez egy egyedi számsorozat, tehát minden eszköz különböző címet kap. Ha egy hálózaton belül minden gép közvetlenül egy központi hálózati hídhoz <em>(bridge, switch)</em> kapcsolódik, akkor a hálózati eszköz a fizikai cím alapján el tudja dönteni, hogy a beérkezett adatcsomagot melyik gépnek kell továbbküldeni.</p>
+					<h4>IP cím</h4>
+					<p>A fizikai címzés viszont csak kisméretű hálózatok esetében működik. Egy nagyobb hálózatban a gépek között általában csak közvetett kapcsolat van. Ahhoz, hogy az adat célba érjen, út közben több hálózati eszközön is keresztül kell haladnia. Ennek a problémának a megoldására vezették be az IP címzést <em>(Internet Protocol)</em>.</p>
+					<p>Az IP cím egy bináris számsorozat, aminek az első része a hálózatot, a második része pedig az adott hálózat egyik gépét azonosítja. Két gép között az adatcsomagok navigálását a hálózati útválasztó <em>(router)</em> végzi az IP címek alapján. Földrajzilag távol lévő gépek esetén az adatcsomagok útválasztók sokaságán haladnak keresztül, és akár alternatív útvonalakat is bejárhatnak.</p>
+					<p>Az IP technológia megalkotásakor 32 bites számokat használtak, ám az így létrehozható ~4,3 milliárd cím mára már kevésnek bizonyul. Sokkal több eszköz csatlakozik az internetre, mint ahány IPv4 címet elő lehet állítani. A megoldást a bithossz növelése jelentette. A manapság terjedőben lévő IPv6-os címek már 128 bites számok, így összes ~79 milliárd milliárd milliárd különböző cím állítható elő.</p>
+					<h4>Domain név</h4>
+					<p>Az IP címzés ugyan megfelel a gépeknek, de az ember számára nehezen megjegyezhető, ezért az internetes szolgáltatásoknak domain neveket <em>(Domain Name System - DNS)</em> szoktunk adni. Ezek olyan jelentéssel bíró, szöveges címek, amiket nemcsak könnyebb megjegyezni, hanem általában az adott szolgáltatás típusára vagy tartalmára is utalnak. A domain nevek és az IP címek párosítását az internetre nagy számban csatlakozó domain név szerverek végzik.</p>
+					<p>A felsőszintű domain <em>(Top Level Domain - TLD)</em> valamilyen általános megjelölés (pl.: .com, .org, .net) vagy egy ország azonosítója (pl.: .hu, .eu, .de). Ezeket egy nonprofit szervezet, az <a href="https://www.icann.org/" target="_blank">ICAAN</a> felügyeli és hozza létre. Másodszintű domian neveket bárki vásárolhat világszerte működő kereskedő cégektől. Ezek bejegyzése és fenntartása évente néhány ezer forintos kiadást jelent. A harmad- és többedszintű domainek létrehozása az adott másodszintű domain alatt pedig ingyenes.</p>
+					<p>Például a <span class="code">.hu</span> a Magyarországot azonosító felsőszintű domain. Az <span class="code">unideb</span> másodszintű domain a Debreceni Egyetem tulajdona, amiért évente használati díjat fizet. Ehhez viszont a rendszergazda már ingyenesen hozhatja létre például a <span class="code">lib</span> harmadszintű domaint az egyetemi könyvtár weblapjának megnevezésére. A <span class="code">lib.unideb.hu</span> névhez tartozó IP címet pedig számtalan DNS szerver tárolja. Ha meg akarjuk nyitni ezt a weblapot, akkor a gépünk az egyik DNS szerverhez fordulva megtudja a könyvtár szerverének IP címét, majd annak használatával kérést küld felé.</p>
+					<h4>URL</h4>
+					<p></p>
+				</section>
+				<section>
+					<h3>Adatbiztonság</h3>
+					<p>Az összeköttetés és a címzés problémáinak megoldása után gondoskodni kell arról, hogy a hálózaton mozgó adatok biztosan célba érjenek és harmadik fél ne férhessen hozzájuk.</p>
+					<h4>Megbízhatóság</h4>
+					<p>A hálózaton az adatok csomagokra bontva utaznak. Minden csomag tartalmazza az adat egy kis darabját és egy úgynevezett fejlécet, ami a továbbításhoz és feldolgozáshoz szükséges információkat hordozza. Például a feladó és a címzett IP címét valamint a csomag sorszámát.</p>
+					<p>A TCP <em>(Transmission Control Protocol)</em> feladata, hogy az adat összes csomagját eljuttassa a címzettnek, ráadásul a megfelelő sorrendben. Ehhez egy egyszerű megoldást használ. A feladó gép az IP cím alapján megkeresi a címzett gépet, és üzenetet küld neki, hogy szeretne kommunikálni vele. Ha a címzett kapcsolódik a hálózatra, és nem túlságosan leterhelt, akkor visszaküld egy üzenetet, hogy kommunikálhatnak. A gépek tehát felveszik egymással a kapcsolatot, és a köztük lévő hálózat adatátviteli valamint a saját adatfeldolgozó sebességük alapján megállapodnak egy darabszámban.</p>
+					<p>A feladó gép ekkor elküldi az adat első N darab csomagját a címzettnek. (N értéke annyi, amennyiben megállapodtak.) Ha az összes csomag időben megérkezik a címzetthez, akkor az küld egy üzenetet a feladónak, hogy jöhet a követkző N darab csomag. Ha valamilyen hiba miatt a csomagok elvesznek vagy megsérülnek út közben, akkor a címzett az utoljára megkapott hibátlan csomag sorszámánál egyel nagyobb sorszámú csomagot újra kéri a feladótól.</p>
+					<h4>Adat titkosítás</h4>
+					<p>A hálózatok méretéből adódóan ritka, hogy a feladó és a címzett közvetlenül kapcsolódik egymáshoz. Az adatcsomagok általában több hálózati eszközön is áthaladnak, és ezek az eszközök akár olvasni is tudják a csomagok tartalmát. Ennek megakadályozására olyan algoritmusokat fejlsztettek ki, amik lehetővé teszik, hogy a feladó által titkosított adatot csak a címzett tudja visszafejteni. A közbeeső hálózati eszközök ugyant tudják olvasni a csomagokat, de azok valódi tartalma helyett csak értelmezhetetlen bitsorozatokat látnak.</p>
+					<p>A hétköznapokban általában a TLS <em>(Transport Layer Security)</em> protokolt használjuk erre a célra. A web böngészés során a TLS használatát a domain név előtt elhelyezkedő HTTPS <em>(HyperText Transfer Protocol Secure)</em> jelzi.</p>
+					<h4>Cím titkosítás</h4>
+					<p></p>
+					<h4>VPN</h4>
+					<p></p>
+				</section>
+			</section>
+			<section>
+				<h2></h2>
+				<p></p>
+			</section>
+		</article>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

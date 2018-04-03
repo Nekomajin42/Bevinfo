@@ -1,0 +1,246 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Digitális színkódolás</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Digitális színkódolás</h1>
+				<p>A számokhoz és karakterekhez hasonlóan a számítógép a színeket is bináris formában tudja tárolni és feldolgozni. Ugyanakkor a karakterkódolástól eltérően, ebben az esetben nem lehet sorszámokra hagyatkozni. A színek különböző tulajdonságait kell számszerűsíteni, hogy aztán azokat kettes számrendszerbe alakítva tudjunk velük dolgozni.</p>
+			</header>
+			<section>
+				<h2>Fény és színek</h2>
+				<p>A fény az elektromágneses sugárzásnak az a hullámhossz tartománya, amit a szem érzékelni képes. Az ember esetében ez a kb. 380-780 nanométer közé eső értékeket jelenti.</p>
+				<section>
+					<h3>Színérzet</h3>
+					<p>A fény hullámhossza meghatározza a hozzá társuló színérzetet. A tartomány alján helyezkedik el az ibolya szín (~380 nm), amit a kék, zöld, sárga, narancs és vörös (~780 nm) követ, ami egyben a skála végpontja is az ember számára. Más állatok esetében ez a tartomány szűkebb vagy tágabb lehet. (Például a rovarok képesek az ultraibolya, a kígyók az infravörös fény érzékelésére, a macskák viszont kevesebb színárnyalatot látnak, mint mi emberek.)</p>
+					<p>A tárgyak színét az határozza meg, hogy milyen hullámhosszú fényt nyelnek el, és milyet vernek vissza. Például a paradicsom azért piros, mert a benne található likopin pigment a piros színt veri vissza, míg a többit elnyeli. Az egyébként átlátszó víz pedig azért kék nagy tömegben, mert a víz részecskéivel ütköző fényrészecskék (fotonok) közül a nagyobb hullámhosszú, kisebb energiájú vöröses sugarak hamarabb elnyelődnek, míg az alacsonyabb hulláhosszú kékes sugarak a nagyobb energiájuk miatt többször is visszaverődnek, mielőtt végül ők is elnyelődnek.</p>
+					<aside>Minden tárgyat olyan színűnek látunk, amilyen színű (hullámhosszú) fényt visszaver.</aside>
+				</section>
+				<section>
+					<h3>Színkeverés</h3>
+					<p>A különböző színárnyalatok különböző hullámhosszú fényből tevődnek össze. A színek keverésénél viszont meg kell különböztetni a fényforrásból és a tárgyakról visszaverődő fényt.</p>
+					<figure>
+						<img src="rgb.svg" alt="Additív" />
+						<img src="cmyk.svg" alt="Szubsztraktív" />
+						<figcaption>Összeadó (balra) és kivonó (jobbra) színkeverés</figcaption>
+					</figure>
+					<p>A fényforrásból érkező különféle hullámhosszú fénysugarak színe összeadódik. Ha a fényforrás egyáltalán nem világít, akkor fekete színt látunk. Ha a fényforrás csak kék és piros fénnyel világít, akkor bíbor (magenta) színt látunk. Ha minden színárnyalat egyforma mennyiségben van jelen, akkor fehér fény alakul ki. <strong>Ezt nevezzük összeadó, vagy másnéven additív színkeverésnek.</strong></p>
+					<p>A tárgyakról visszaverődő fényből azok az árnyalatok kivonódnak, amiket a tárgy elnyel. Ha az adott tárgy minden hullámhosszú fényt visszaver, akkor fehér színűnek látjuk. Ha a tárgy a zöld színt elnyeli, a pirosat és kéket pedig visszaveri, akkor bíbor színűnek látjuk. Ha pedig minden színárnyalatot elnyel, akkor fekete szín alakul ki. <strong>Ezt nevezzük kivonó, vagy másnéven szubsztraktív színkeverésnek.</strong>
+				</section>
+			</section>
+			<section>
+				<h2>Színkódolás</h2>
+				<p>A színárnyalatok számszerűsítésére sokféle megoldás született. Az alábbiakban a három legelterjedtebb módszerről lesz szó, illetve egy negyedikről, ami ezekre épül.</p>
+				<section>
+					<h3>RGB</h3>
+					<p>Az RGB színmodell azt határozza meg, hogy a kibocsájtott fény milyen arányban tartalmazza a vörös (Red), a zöld (Green) és a kék (Blue) alapszíneket. Az RGB tehát összeadó színkeverésen alapul, amit az informatikában a kijelzőknél és LED fényforrásoknál szoktunk alkalmazni.</p>
+					<p>A három alapszín mennyiségét hagyományosan egyenként 8 bites számokkal jelöljük. Így a 0 jelenti azt, ha az adott alapszín egyáltalán nem jelenik meg, a 255 pedig azt, ha az adott alapszín maximális mértékben megjelenik. Az rgb(0, 0, 0) a fekete, az rgb(255, 255, 255) a fehér szín kódja. Az így kapott számhármasokból pedig <span class="code">2<sup>8</sup>×2<sup>8</sup>×2<sup>8</sup> = 2<sup>24</sup> = ~16,7 millió</span> különböző színárnyalatot lehet előállítani.</p>
+					<h4>Hexadecimális ábrázolás</h4>
+					<p>Az RGB értékeket át lehet alakítani egy rövidebb formára. A tizes számrendszerben lévő számokat egyesével tizenhatos számrendszerbe kell váltani és egy kettőskereszt karakter után írni. Mivel a nulla minden számrendszerben nulla, a fekete szín kódja a #000000 lesz. A 255 átváltva ff-ként írható fel, így a fehér szín kódja #ffffff lesz. (A kis- és nagybetűs írásmód között nincs különbség.)</p>
+					<h4>RGBA</h4>
+					<p>Egy színárnyalat megadásakor nemcsak annak összetételét, hanem átlátszóságát is meg lehet határozni. Erre szolgál az RGBA jelölés, ahol az A (alfa) érték egy 0.0 és 1.0 közötti tizedes tört. A nulla a teljesen átlátszó, az egy a teljesen átlátszatlan szín. Például az rgba(0, 0, 0, 0.5) az a fekete szín, ami mögött félig látszik a háttér.</p>
+					<aside>Számítógépes kódokban a tizedesvessző szerepét általában a tizedespont tölti be.</aside>
+				</section>
+				<section>
+					<h3>HSL</h3>
+					<p>Az RGB színmodellt felfoghatjuk úgy is, mint egy háromdimenziós tér X, Y és Z tengelyeit. Ez a megközelítés viszont az ember számára nehezen átlátható. A számítógépes színpaletták általában ennek egy geometrialilag transzformált verzióját szokták megjelenítni kör vagy kiterített hengerpalást formájában.</p>
+					<figure>
+						<img src="hsl.svg" alt="HSL színskála" />
+						<figcaption>X tengelyen a Hue, <br />Y tengelyen a Lightness érték</figcaption>
+					</figure>
+					<p>A HSL színmodell szintén három értéket használ a teljes színárnyalat összeállításához, de az RGB-től eltérően nem az alapszínek mennyiségével dolgozik.</p>
+					<ul>
+						<li>A Hue, magyarul színárnyalat határozza meg a három alapszín egymáshoz viszonyított arányát. Az értéke 0-tól 360-ig terjedhet. (0°-nál helyezkedik el a vörös, 120°-nál a zöld, 240°-nál a kék, 360°-nál pedig újra a vörös.)</li>
+						<li>A Saturation, magyarul telítettség határozza meg a szín élénkségét. Az értéke 0 és 100 közé eső szám, ahol a 0% szürke, a 100% pedig az a szín, amit a Hue érték meghatároz.</li>
+						<li>A Lightness, magyarul világosság határozza meg a szín világosságát. Az értéke 0 és 100 közé eső szám, ahol a 0% a fekete, a 100% a fehér, az 50% pedig az a szín, amit a Hue és a Saturation együtt meghatároz.</li>
+					</ul>
+					<p>A HSL színmodell az RGB-hez hasonlóan szintén kaphat egy negyedik, alfa értéket, ami az átlátszóság mértékét adja meg.</p>
+				</section>
+				<section>
+					<h3>CMYK</h3>
+					<p>A CMYK színmodell, az előző kettővel ellentétben kivonásos színkeverésen alapul, amit nyomtatásnál használunk. Az RGB-hez hasonlóan az alapszínek mennyiségével dolgozik, de az alapszínei a türkiz (Cyan), a bíbor (Magenta) és a sárga (Yellow). Bár elméletben a három szín egyenlő arányú keverékéből fekete szín jön létre, a gyakorlatban a festékek vegyi összetétele miatt sötétbarna keletkezik, ezért külön fekete (blacK) hozzáadására van szükség.</p>
+					<p>Az alapszínek mennyiségét százalékos formában szoktuk megadni, ahol a 0% azt jelenti, hogy az adott szín egyáltalán nem található meg, a 100% pedig azt, hogy maximális mennyiségben megtalálható.</p>
+					<p>A CMYK színmodell gyakorlati alkalmazása miatt az átlátszóságot nem értelmezzük.</p>
+				</section>
+				<section>
+					<h3>Név</h3>
+					<p>Bármelyik modellt is használjuk a fentiek közül, több millió színárnyalatot tudunk előállítani. A gyakorlatban viszont ezeknek csak a töredékét használjuk. A könnyebb kezelhetőség érdekében a különféle színpalettákon általában elnevezik az árnyalatokat. Ezek a színpaletták viszont gyakran nem kompatibilisek egymással.</p>
+					<p>A hétköznapokban gyakran használt X11/W3C színpaletta kb. 150 színárnyalatot nevesít. Így például a "blue" mindig az rgb(0, 0, 255) árnyalatot jelenti, a "lightblue" pedig az rgb(173, 216, 230) árnyalatot.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Példák</h2>
+				<section>
+					<h3>Szürkeárnyalatos (szaturáció: 0%)</h3>
+					<table class="block">
+						<tr>
+							<th>Név</th>
+							<th>RGB</th>
+							<th>Hex</th>
+							<th>HSL</th>
+							<th>CMYK</th>
+							<th>Szín</th>
+						</tr>
+						<tr>
+							<td>White</td>
+							<td>rgb(255, 255, 255)</td>
+							<td>#ffffff</td>
+							<td>hsl(0, 0%, 100%)</td>
+							<td>cmyk(0%, 0%, 0%, 0%)</td>
+							<td style="background-color: White;"></td>
+						</tr>
+						<tr>
+							<td>Silver</td>
+							<td>rgb(192, 192, 192)</td>
+							<td>#c0c0c0</td>
+							<td>hsl(0, 0%, 75%)</td>
+							<td>cmyk(0%, 0%, 0%, 25%)</td>
+							<td style="background-color: Silver;"></td>
+						</tr>
+						<tr>
+							<td>Gray, Grey</td>
+							<td>rgb(128, 128, 128)</td>
+							<td>#808080</td>
+							<td>hsl(0, 0%, 50%)</td>
+							<td>cmyk(0%, 0%, 0%, 50%)</td>
+							<td style="background-color: Gray;"></td>
+						</tr>
+						<tr>
+							<td>Black</td>
+							<td>rgb(0, 0, 0)</td>
+							<td>#000000</td>
+							<td>hsl(0, 0%, 0%)</td>
+							<td>cmyk(0%, 0%, 0%, 100%)</td>
+							<td style="background-color: Black;"></td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h3>Színes (szaturáció: 100%)</h3>
+					<table class="block">
+						<tr>
+							<th>Név</th>
+							<th>RGB</th>
+							<th>Hex</th>
+							<th>HSL</th>
+							<th>CMYK</th>
+							<th>Szín</th>
+						</tr>
+						<tr>
+							<td>Red</td>
+							<td>rgb(255, 0, 0)</td>
+							<td>#ff0000</td>
+							<td>hsl(0, 100%, 50%)</td>
+							<td>cmyk(0%, 100%, 100%, 0%)</td>
+							<td style="background-color: Red;"></td>
+						</tr>
+						<tr>
+							<td>Maroon</td>
+							<td>rgb(128, 0, 0)</td>
+							<td>#800000</td>
+							<td>hsl(0, 100%, 25%)</td>
+							<td>cmyk(0%, 100%, 100%, 50%)</td>
+							<td style="background-color: Maroon;"></td>
+						</tr>
+						<tr>
+							<td>Yellow</td>
+							<td>rgb(255, 255, 0)</td>
+							<td>#ffff00</td>
+							<td>hsl(60, 100%, 50%)</td>
+							<td>cmyk(0%, 0%, 100%, 0%)</td>
+							<td style="background-color: Yellow;"></td>
+						</tr>
+						<tr>
+							<td>Olive</td>
+							<td>rgb(128, 128, 0)</td>
+							<td>#808000</td>
+							<td>hsl(60, 100%, 25%)</td>
+							<td>cmyk(0%, 0%, 100%, 50%)</td>
+							<td style="background-color: Olive;"></td>
+						</tr>
+						<tr>
+							<td>Lime</td>
+							<td>rgb(0, 255, 0)</td>
+							<td>#00ff00</td>
+							<td>hsl(120, 100%, 50%)</td>
+							<td>cmyk(100%, 0%, 100%, 0%)</td>
+							<td style="background-color: Lime;"></td>
+						</tr>
+						<tr>
+							<td>Green</td>
+							<td>rgb(0, 128, 0)</td>
+							<td>#008000</td>
+							<td>hsl(120%, 100%, 25%)</td>
+							<td>cmyk(100%, 0%, 100%, 50%)</td>
+							<td style="background-color: Green;"></td>
+						</tr>
+						<tr>
+							<td>Cyan, Aqua</td>
+							<td>rgb(0, 255, 255)</td>
+							<td>#00ffff</td>
+							<td>hsl(180, 100%, 50%)</td>
+							<td>cmyk(100%, 0%, 0%, 0%)</td>
+							<td style="background-color: Cyan;"></td>
+						</tr>
+						<tr>
+							<td>Teal</td>
+							<td>rgb(0, 128, 128)</td>
+							<td>#008080</td>
+							<td>hsl(180, 100%, 25%)</td>
+							<td>cmyk(100%, 0%, 0%, 50%)</td>
+							<td style="background-color: Teal;"></td>
+						</tr>
+						<tr>
+							<td>Blue</td>
+							<td>rgb(0, 0, 255)</td>
+							<td>#0000ff</td>
+							<td>hsl(240, 100%, 50%)</td>
+							<td>cmyk(100%, 100%, 0%, 0%)</td>
+							<td style="background-color: Blue;"></td>
+						</tr>
+						<tr>
+							<td>Navy</td>
+							<td>rgb(0, 0, 128)</td>
+							<td>#000080</td>
+							<td>hsl(240, 100%, 25%)</td>
+							<td>cmyk(100%, 100%, 0%, 50%)</td>
+							<td style="background-color: Navy;"></td>
+						</tr>
+						<tr>
+							<td>Magenta, Fuchsia</td>
+							<td>rgb(255, 0, 255)</td>
+							<td>#ff00ff</td>
+							<td>hsl(300, 100%, 50%)</td>
+							<td>cmyk(0%, 100%, 0%, 0%)</td>
+							<td style="background-color: Magenta;"></td>
+						</tr>
+						<tr>
+							<td>Purple</td>
+							<td>rgb(128, 0, 128)</td>
+							<td>#800080</td>
+							<td>hsl(300, 100%, 25%)</td>
+							<td>cmyk(0%, 100%, 0%, 50%)</td>
+							<td style="background-color: Purple;"></td>
+						</tr>
+					</table>
+				</section>
+			</section>
+		</article>
+		<footer>
+			v1.0 &bullet; 
+		</footer>
+	</body>
+</html>

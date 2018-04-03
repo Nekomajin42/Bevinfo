@@ -1,7 +1,7 @@
 {
 	"dir": "ltr",
 	"lang": "hu",
-	"name": "Bevezetés a felhasználói szintű informatikába",
+	"name": "Bevezetés az informatikába",
 	"short_name": "Bevinfó",
 	"description": "Online középszintű informatika tananyag.",
 	"start_url": "index.html",
@@ -37,8 +37,13 @@
 			"type": "image/png"
 		},
 		{
+			"src": "icons/icon180.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		},
+		{
 			"src": "icons/icon.svg",
-			"sizes": "16x16 32x32 64x64 128x128 144x144",
+			"sizes": "16x16 32x32 64x64 128x128 144x144 180x180",
 			"type": "image/svg+xml"
 		}
 	]
