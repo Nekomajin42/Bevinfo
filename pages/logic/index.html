@@ -171,15 +171,15 @@
 					</figure>
 					<p><strong>A <span class="code">kizáró vagy</span> művelet eredménye akkor lesz igaz, ha pontosan az egyik logikai kifejezés igazságértéke igaz.</strong> Az eredmény akkor is hamis, ha mindkét kifejezés igaz. Erre azért van szükség, mert a beszélt nyelvben a "vagy" szó sokszor nem engedi meg az egyenlőséget. Pl.: <em>alma vagy körte</em>, <em>kisebb vagy nagyobb</em>, <em>egyik vagy másik</em>.</p>
 					<p>A halmazműveletek közül megfelelője a szimmetrikus különbség, vagyis a halmazok különbségeinek uniója. <span class="code">(A / B) &cup; (B / A)</span> azoknak az elemeknek a halmaza, amik vagy csak az <span class="code">A</span> vagy csak a <span class="code">B</span> halmaznak az elemei.</p>
-					<p>A algebrai műveletek közül megfelelője szintén az összeadás. Azzal a különbséggel, hogy az összegnek csak az utolsó számjegyét nézzük, ami <span class="code">1 + 1</span> esetén 0, tehát hamis.</p>
+					<p>Az algebrai műveletek közül megfelelője szintén az összeadás. Azzal a különbséggel, hogy az összegnek csak az utolsó számjegyét nézzük, ami <span class="code">1 + 1</span> esetén 0, tehát hamis.</p>
 				</section>
 			</section>
 			<section>
 				<h2>Műveleti sorrend</h2>
-				<p>Egy-egy logikai műveltet már el tudunk végezni, de mi a helyzet akkor, ha több áll egymás után? Ebben az setben ugyanazokat a szabályokat kell alkalmazni, mint a matematikában.</p>
+				<p>Egy-egy logikai műveltet már el tudunk végezni, de mi a helyzet akkor, ha több áll egymás után? Ebben az esetben ugyanazokat a szabályokat kell alkalmazni, mint a matematikában.</p>
 				<ul>
-					<li>Ha csak az <span class="code">és</span>, <span class="code">vagy</span>, <span class="code">kizáró vagy</span> műveleteket használjuk, akkor balról jobbra haladva kell őket végrehajtani.</li>
-					<li>Ha a <span class="code">nem</span> műveletet is használjuk, akkor azt mindig előbb kell elvégezni, mint a másik hármat.</li>
+					<li>Az <span class="code">és</span>, <span class="code">vagy</span> és <span class="code">kizáró vagy</span> műveletek egyenrangúak. Ezeket balról jobbra haladva kell végrehajtani.</li>
+					<li>A <span class="code">nem</span> művelet erősebb, mint a másik három, ezért előbb kell elvégezni.</li>
 					<li>A zárójelek természetesen felülírják a műveletek sorrendjét és rangját is. Ebben az esetben belülről kifelé kell haladni.</li>
 				</ul>
 				<section>
