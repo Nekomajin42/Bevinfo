@@ -1,0 +1,136 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Karaktertábla</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		window.addEventListener("DOMContentLoaded", function()
+		{
+			const code = document.getElementById("code");
+			const char = document.getElementById("char");
+			
+			code.addEventListener("click", function()
+			{
+				code.select();
+			});
+			
+			char.addEventListener("click", function()
+			{
+				char.select();
+			});
+			
+			code.addEventListener("input", function()
+			{
+				let num = parseInt(code.value);
+				if (!isNaN(num))
+				{
+					char.value = String.fromCharCode(num);
+				}
+			});
+			
+			char.addEventListener("input", function()
+			{
+				let s = char.value;
+				if (s !== "")
+				{
+					code.value = s.charCodeAt(0);
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../charcode/index.html">Karakterkódolás</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Karaktertábla</h1>
+				<p>Az ablábbi táblázat a Unicode kódtábla első 128 karakterét tartalmazza. Ez majdnem megegyezik a korábbi 7 bites ASCII tábla tartalmával.</p>
+			</header>
+			<section id="chartable">
+				<h2>A Unicode első 128 karaktere</h2>
+				<script type="text/javascript">
+				/*const target = document.getElementById("chartable");
+				const table = document.createElement("table");
+				let row, cell;
+				
+				for (let i=0; i<32; i++)
+				{
+					row = document.createElement("tr");
+					
+					for (let j=0; j<4; j++)
+					{
+						cell = document.createElement("td");
+						cell.innerText = toBin(i+j*32);
+						row.appendChild(cell);
+						
+						cell = document.createElement("td");
+						cell.innerText = i+j*32;
+						row.appendChild(cell);
+						
+						cell = document.createElement("td");
+						cell.innerText = toHex(i+j*32);
+						row.appendChild(cell);
+						
+						cell = document.createElement("td");
+						cell.innerText = toChar(i+j*32);
+						row.appendChild(cell);
+					}
+					
+					table.appendChild(row);
+				}
+				
+				target.appendChild(table);
+				
+				function toBin(num)
+				{
+					let bin = "";
+					for (let i=0; i<8; i++)
+					{
+						bin += (num % 2).toString();
+						num = Math.floor(num / 2);
+					}
+					
+					return bin;
+				}
+				
+				function toHex(num)
+				{
+					let hex = "";
+					for (let i=0; i<2; i++)
+					{
+						hex += (num % 16).toString();
+						hex = Math.floor(hex / 16);
+					}
+					
+					return hex;
+				}
+				
+				function toChar(num)
+				{
+					return String.fromCharCode(num);
+				}*/
+				</script>
+			</section>
+			<section>
+				<h2>Karakter kereső</h2>
+				<p>Az alábbi űrlap segítségével megkeresheted a beírt sorszámhoz tartozó karaktert, vagy a beírt karakterhez tartazó sorszámot.</p>
+				<form id="lookup">
+					<label>Sorszám: <input type="text" id="code" pattern="[0-9]+" /></label>
+					<label>Karakter: <input type="text" id="char" maxlength="1" /></label>
+				</form>
+			</section>
+		</article>
+		<footer>
+			<button type="button" id="up">Ugrás a lap tetejére</button>
+		</footer>
+	</body>
+</html>

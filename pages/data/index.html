@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<nav>
-			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
 		</nav>
 		<article>
 			<header>
@@ -28,10 +28,14 @@
 			</section>
 			<section>
 				<h2>Adatmennyiségek</h2>
-				<p>A Neumann-elvek alapján tudjuk, hogy a számítógép kettes számrendszerben működik. Ez azt jelenti, hogy az adatok feldolgozását, tárolását és továbbítását is kettes számrendszerbeli számokra alakítva végzi.</p>
+				<p>A <a href="../neumann/index.html" target="_blank">Neumann-elvek</a> alapján tudjuk, hogy a számítógép kettes számrendszerben működik. Ez azt jelenti, hogy az adatok feldolgozását, tárolását és továbbítását is kettes számrendszerbeli számokra alakítva végzi.</p>
 				<p>Az informatikában <strong>az adatmennyiség legkisebb mértékegysége a bit.</strong> A bit szó az angol <em>binary digit</em>, magyarul kettes számrendszerbeli számjegy kifejezés rövidítése. Mivel a kettes számrendszerben összesen kétféle számjegyünk van, így <strong>a bit értéke</strong> is <strong>csak 0 vagy 1 lehet</strong>.</p>
 				<section>
 					<h3>Átváltás</h3>
+					<figure>
+						<pre>bit: b, byte: B</pre>
+						<figcaption>Rövidítések</figcaption>
+					</figure>
 					<p>A bit manapság használt legkisebb többszöröse a <strong>byte</strong> (kiejtés: bájt). A bit rövidítése a kis "b" betű, a byte rövidítése a nagy "B" betű. A történlem során több váltószám is létezett, de végül az <span class="code">1 byte = 8 bit</span> vált szabványossá. Emelett a bitnek léteznek más többszörösei is, például a nibble (4 bit), a blokk vagy a lap (ezek mérete rendszerenként eltérő lehet), de ezeket a hétköznapi életben nem szoktuk használni.</p>
 					<figure>
 						<table class="figure">
@@ -127,17 +131,20 @@
 				<h2>Az adatok kezelése</h2>
 				<section>
 					<h3>Tárolás</h3>
+					<p>Az adattárolásról bővebben a <a href="../storage/index.html" target="_blank">Háttértárak</a> fejezetben olvashatsz bővebben.</p>
 				</section>
 				<section>
 					<h3>Feldolgozás</h3>
+					<p>Az adatok feldolgozásáról bővebben a <a href="../../index.html#software" target="_blank">szoftveres</a> fejezetekben olvashatsz bővebben.</p>
 				</section>
 				<section>
 					<h3>Továbbítás</h3>
+					<p><em>Feldogozás alatt...</em></p>
 				</section>
 			</section>
 		</article>
 		<footer>
-			v1.0 &bullet; 
+			<button type="button" id="up">Ugrás a lap tetejére</button>
 		</footer>
 	</body>
 </html>

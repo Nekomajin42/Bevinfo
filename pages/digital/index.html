@@ -13,40 +13,81 @@
 	</head>
 	<body>
 		<nav>
-			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="../dict/index.html">Kislexikon</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
 		</nav>
 		<article>
 			<header>
 				<h1>A digitalizálás folyamata</h1>
-				<p>A világ fizikai, mérhető jelenségeit manapság szinte kivétel nélkül számítógépek segítségével dolgozzuk fel. A megfelelő mérőeszközhöz csatlakoztatva a számítógépek képesek nagymennyiségű adatot tárolni, és azt gyorsan feldolgozni. Viszont bármennyire is fejlett egy számítógép, az adatfeldolgozó képességének van egy korlátja. Végtelen sok adattal nem tud dolgozni. A mérhető, fizikai jelenségek viszont általában végtelen sok értékből állnak. Ennek a problémának a kezelését nevezzük digitalizálásnak.</p>
+				<p>A világ fizikai, mérhető jelenségeit manapság szinte kivétel nélkül számítógépek segítségével dolgozzuk fel. A megfelelő mérőeszközhöz csatlakoztatva a számítógépek képesek nagy mennyiségű adatot tárolni, és azt gyorsan feldolgozni. Viszont bármennyire is fejlett egy számítógép, az adatfeldolgozó képességének van egy korlátja. Végtelen sok adattal nem tud dolgozni. A mérhető, fizikai jelenségek viszont általában végtelen sok értékből állnak. Ennek a problémának a kezelését nevezzük digitalizálásnak.</p>
 			</header>
 			<section>
 				<h2>Analóg és digitális jelek</h2>
-				<p><strong>A digitalizálás szempontjából jelnek nevezzük a körülöttünk lévő világban zajló események mérhető állapotait.</strong> Ilyen például a hőmérséklet, a légnyomás, a hangerősség, az elektromos feszültség, egy test mozgásának sebessége vagy éppen a fény hullámhossza.</p>
+				<figure>
+					<img src="analog-digital-signal.svg" alt="Analóg és digitális jel" />
+					<figcaption>Analóg (szürke) <br />és digitális (fekete) jel</figcaption>
+				</figure>
+				<p><strong>A digitalizálás szempontjából jelnek nevezzük a körülöttünk lévő világban megfigyelhető jelenségek mérhető állapotait.</strong> Ilyen például a hőmérséklet, a légnyomás, a hangerősség, az elektromos feszültség, egy test mozgásának sebessége vagy éppen a fény hullámhossza.</p>
 				<section>
 					<h3>Összehasonlítás</h3>
-					<figure>
-						<img src="analog-digital-signal.svg" alt="Analóg és digitális jel" />
-						<figcaption>Analóg (szürke) és digitális (fekete) jel</figcaption>
-					</figure>
-					<p>Az <strong>analóg</strong> jel legfontosabb tulajdonsága az, hogy bármilyen időpillanatban vagy bármilyen távolsággal arrébb mérve mindig van értéke. Bármilyen pici intervallumot választunk, a jelnek mindig lesz értéke. Az analóg jel tehát <strong>folyamatos</strong>, időben és térben <strong>végtelen sok értékből áll</strong>.</p>
-					<p>A <strong>digitális</strong> jel ezzel szemben <strong>szakaszos</strong>, vagyis <strong>véges sok értékből áll</strong>. Két érték között létezik olyan intervallum, amikor a jelnek nem ismerjük az értékét. Eredetileg volt, de akkor és ott nem mértük meg.</p>
+					<p>Az <strong>analóg</strong> jel legfontosabb tulajdonsága az, hogy bármikor, bárhol mérve mindig van értéke. Bármilyen pici intervallumot választunk, a jelnek mindig lesz értéke. Az analóg jel tehát <strong>folyamatos</strong>, időben vagy térben <strong>végtelen</strong> sok értékből áll.</p>
+					<p>A <strong>digitális</strong> jel ezzel szemben <strong>szakaszos</strong>, vagyis <strong>véges</strong> sok értékből áll. Két érték között létezik olyan intervallum, amikor a jelnek nem ismerjük az értékét. Eredetileg volt, de akkor és ott nem mértük meg. Ez értelemszerűen adatvesztéssel jár, de ez a probléma szükség esetén orvosolható más módszerekkel (lásd lentebb).</p>
+					<p>Az analóg jelek sokfélék lehetnek (lásd fentebb), a digitális jelek viszont minden esetben számok.</p>
 				</section>
 				<section>
 					<h3>Példák</h3>
 					<h4>Időbeli folytonosság</h4>
-					<p>Hogy megértsük az előbbieket, vegyünk egy egyszerű példát! Képzeljünk el egy higanyos hőmérőt! A higanyszálnak minden időpillanatban van magassága. Másképp megfogalmazva, egy adott időtartam, például egy nap alatt akárhányszor nézünk rá a hőmérőre, az mindig mutat valamilyen hőmérsékletet. Ha végtelen sokszor nézünk rá, akkor végtelen sokszor tudjuk leolvasni az értékét. A hőmérő tehát analóg jelet szolgáltat. Most képzeljük el azt a valós helyzetet, hogy szeretnénk a napi átlaghőmérsékletet kiszámolni! Végtelen sok adattal nem tudunk számolni, hiszen akkor soha nem fejeznénk be az összeadást. Valahogy le kell szűkíteni a felhasznált értékek mennyiségét. Ez jelentheti azt, hogy óránként, percenként, másodpercenként vagy akár ezredmásodpercenként rögzítjük az éppen aktuális hőmérsékletet. Ez utóbbi egy nap alatt több, mint 86 millió értéket jelent, ami bár nagyon sok, mégis véges szám.</p>
+					<p>Hogy megértsük az előbbieket, vegyünk egy egyszerű példát! Képzeljünk el egy higanyos hőmérőt! A higanyszálnak minden időpillanatban van magassága. Másképp megfogalmazva, egy adott időtartam, például egy nap alatt akárhányszor nézünk rá a hőmérőre, az mindig mutat valamilyen hőmérsékletet. Ha végtelen sokszor néznénk rá, akkor végtelen sokszor tudnánk leolvasni az értékét. A hőmérő tehát analóg jelet szolgáltat.</p>
+					<p>Most képzeljük el azt a valós helyzetet, hogy szeretnénk a napi átlaghőmérsékletet kiszámolni! Végtelen sok adattal nem tudunk számolni, hiszen akkor soha nem fejeznénk be az összeadást. Valahogy le kell szűkíteni a felhasznált értékek mennyiségét. Ez jelentheti azt, hogy óránként, percenként, másodpercenként vagy akár ezredmásodpercenként rögzítjük az éppen aktuális hőmérsékletet. Ez utóbbi egy nap alatt több, mint 86 millió értéket jelent, ami bár nagyon sok, mégis véges szám.</p>
 					<h4>Térbeli folytonosság</h4>
-					<p>Nézzünk egy másik példát! Egy papírra nyomtatott fényképet szeretnénk beszkennelni. Jó minőségű előhívás után a papírnak minden pontját fedi valamilyen színű festék. Belátható, hogy bármilyen kicsi távolsággal haladunk arrébb a papíron, a két pont közötti távolságot matematikailag mindig meg tudjuk felezni. A szkenner viszont nem tudja végtelen sok számú pontnak megnézni a színét, hiszen akkor sosem fejezné be a kép beolvasását. Be kell állítani tehát, hogy az olvasó fej milyen állandó távolságonként nézze meg a papír színét. Ha elég kicsi távolságot választunk, akkor végül olyan sok pontot fogunk kapni, ami a szemünknek elég lesz ahhoz, hogy összefüggő képet lásson. Ám ezek a pontok megszámlálhatóak, vagyis véges sok lesz belőlük.</p>
+					<p>Nézzünk egy másik példát! Egy papírra nyomtatott fényképet szeretnénk beszkennelni. Jó minőségű előhívás után a papírnak minden pontját fedi valamilyen színű festék. Belátható, hogy bármilyen kicsi távolsággal haladunk arrébb a papíron, a két pont közötti távolságot matematikailag mindig meg tudjuk felezni. A szkenner viszont nem tud végtelen sok számú pontot megvizsgálni, hiszen akkor sosem fejezné be a kép beolvasását. Be kell állítani tehát, hogy az olvasó fej milyen állandó távolságonként nézze meg a papír színét. Ha elég kicsi távolságot választunk, akkor végül olyan sok pontot fogunk kapni, ami a szemünknek elég lesz ahhoz, hogy összefüggő képet lásson. Ám ezek a pontok megszámlálhatók, vagyis véges sok lesz belőlük.</p>
+				</section>
+				<section>
+					<h3>Digitalizáló eszközök</h3>
+					<p>A hétköznapokban leggyakrabban használt digitalizálás végző eszközök a mikrofon, a kamera és a szkenner. Az ezekből származó analóg jeleket általában egy digitális jelfeldolgozó processzor <em>(DSP - Digital Signal Processor)</em> alakítja digitális jellé.</p>
+					<p>Többnyire nem tekintjük számítógépes perifériáknak, de szintén gyakran használt digitalizáló eszközök az elektronikus hőmérők, vérnyomásmérők és egyéb háztartási eszközök.</p>
 				</section>
 			</section>
 			<section>
 				<h2>A digitalizálás lépései</h2>
-				
+				<section>
+					<h3>Mintavételezés</h3>
+					<p>A vizsgált jelenséget valamilyen eszközzel mérni kell. Meg kell határozni, hogy az eszkök milyen időközönként vagy távolságonként szolgáltasson értéket. Ez a mintavételezési gyakoriság, más néven felbontás.</p>
+					<p>A mérőeszköz pontossága és kapacitása alapvetően meghatározza, hogy az analóg jelnek mekkora része veszik el, vagyis a létrehozandó digitális jel mennyire tükrözi a vizsgált jelenséget. Minél nagyobb a felbontás, és minél pontosabb a mérőeszköz, annál valósághűbb másolatát kapjuk az eredeti, analóg jelnek.</p>
+					<p>A digitális jel minőségét a mérőeszköz pontatlansága és alacsony felbontása mellett ronthatja az úgynevezett mérési zaj. Hangfeldolgozás esetén ez lehet tényleges zaj, míg képfeldolgozás esetén lehet például egy koszos lencse vagy a rossz megvilágítás.</p>
+				</section>
+				<section>
+					<h3>Kvantálás</h3>
+					<p>A mintavételezéssel előállított jeleket ezután számszerűsíteni kell (quantity = mennyiség). Meg kell határozni egy intervallum két végpontját és lépésközét, majd a mért értéket el kell helyezni az így kialakított skálán, a Neumann-elveknek megfelelően bináris formában. Ha valamilyen okból nincs mért értékünk, azt is jelezni kell. Erre a célra általában az N/A vagy a NULL értékeket szoktuk használni.</p>
+					<aside>A NULL érték nem egyenlő a nulla számmal! A NULL jelentése hiányzó, nem ismert érték, ami lehet éppen nulla is, vagy bármilyen más érték.</aside>
+					<p>Az így előállított digitális adathalmazt ezután már feldogozhatjuk, vagy megjeleníthetjük a számítógép segítségével.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Hibajavítás és becslés</h2>
+				<p>A mintavételezés és a kvantálás során is sérülhet a digitális jel minősége. Az előbbi lehet például egy kimaradt vagy pontatlan mérés, míg az utóbbi általában a kerekítésből adódó eltérés.</p>
+				<p>Ha ismerjük a mérőeszközünk pontatlanságának mértékét, akkor az ebből adódó hibát a kvantálás vagy az adatfeldolgozás során tudjuk korrigálni. Érdekesebb kérdés, hogy mit kell tenni akkor, ha olyan értékre van szükségünk, amit éppen nem mértünk meg.</p>
+				<section>
+					<h3>Interpoláció</h3>
+					<figure>
+						<img src="interpolation.svg" alt="Interpoláció" />
+						<figcaption>Interpoláció</figcaption>
+					</figure>
+					<p>Interpolációnak nevezzük azt a becslést, amit akkor végzünk, ha egy adathalmaz belsejébe eső értéket szeretnénk kiszámolni. Ennek a legegyszerűbb formája a két szomszédos, ismert érték matematikai átlagának kiszámolása, de az esetek többségében valamilyen súlyozott átlaggal pontosabb eredményt kapunk.</p>
+					<p>Például ha egy képet a duplájára szeretnénk nagyítani, akkor azt fogjuk tapasztalni, hogy az eddig egy képponttal ábrázolt értéket négy képponton kell megjeleníteni. Ha nem szeretnénk, hogy emiatt látványos pixelesedés jelentkezzzen a képen, akkor a képpontok színét újra kell számolni. Nagy hibát nem követünk el, ha az eredeti és a szomszédos képpont színét átlagoljuk, de pontosabb eredményt kapunk akkor, ha a távolabbi képpontok színét is figyelembe vesszük.</p>
+				</section>
+				<section>
+					<h3>Extrapoláció</h3>
+					<figure>
+						<img src="extrapolation.svg" alt="Extrapoláció" />
+						<figcaption>Extrapoláció</figcaption>
+					</figure>
+					<p>Az extrapoláció az a fajta becslés, amit akkor végzünk, ha egy ismert adathalmazon kívül eső értéket szeretnénk kiszámolni. Ennek a megvalósítása általában nehezebb, mert a keresett értéket csak egy oldalról határolják ismert értékek.</p>
+					<p>Például ha egy test mozgását szeretnénk (X,Y) koordinátapárokkal leírni, de a mérőeszközünk néhány mérés után elromlik, akkor a további értékekre csak következtetni tudunk, például a korábban mért értékek gyakoriságának felhasználásával. Minél távolabb kerülünk az utolsó mért értéktől, a következtetésünk annál bizonytalanabb lesz.</p>
+				</section>
 			</section>
 		</article>
 		<footer>
-			v1.0 &bullet; 
+			<button type="button" id="up">Ugrás a lap tetejére</button>
 		</footer>
 	</body>
 </html>
