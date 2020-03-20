@@ -202,6 +202,7 @@ vertical-align: top;}
 font-weight: bold;}
 
 .figure caption {
+padding: 5px 0 0 0;
 font-size: 0.8rem;}
 
 .no-break {
