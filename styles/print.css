@@ -152,6 +152,9 @@ vertical-align: top;}
 .block th {
 font-weight: bold;}
 
+.figure caption {
+font-size: 0.8rem;}
+
 .no-break {
 white-space: nowrap;}
 
@@ -165,6 +168,9 @@ margin: 0 5px 0 0;}
 .float-right {
 float: right;
 margin: 0 0 0 5px;}
+
+.border-full {
+border: 1px solid Black;}
 
 .border-top {
 border-top: 1px solid Black;}

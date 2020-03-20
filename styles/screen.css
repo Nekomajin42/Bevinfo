@@ -182,6 +182,7 @@ display: inline-block;
 width: auto;
 margin: 0 5px 0 5px;
 vertical-align: top;
+line-height: 120%;
 font-family: Consolas, monospace;
 font-size: 0.9rem;
 border-collapse: collapse;}
@@ -200,6 +201,9 @@ vertical-align: top;}
 .block th {
 font-weight: bold;}
 
+.figure caption {
+font-size: 0.8rem;}
+
 .no-break {
 white-space: nowrap;}
 
@@ -213,6 +217,9 @@ margin: 0 5px 0 0;}
 .float-right {
 loat: right;
 margin: 0 0 0 5px;}
+
+.border-full {
+border: 2px solid Grey;}
 
 .border-top {
 border-top: 2px solid Grey;}

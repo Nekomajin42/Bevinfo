@@ -128,14 +128,46 @@
 				</section>
 			</section>
 			<section>
+				<h2>Adattípusok</h2>
+				<p>Az adatbázisban tárolt adatokat alapvetően aszerint oszthatjuk két nagy csoportra, hogy lehet-e velük matematikai műveletet végezni, vagy nem.</p>
+				<section>
+					<h3>Szöveges</h3>
+					<p>A szöveges adatokkal <strong>nem</strong> tudunk matematikai műveletet végezni. (Relációs műveleteket viszont igen, hiszen az ábécé sorrendet el tudjuk dönteni.)</p>
+					<p>A szöveges adatok tartalmazhatnak számjegyeket is, és állhatnak csupán számjegyekből is. Például az irányítószámot vagy a telefonszámot tárolhatjuk szövegként is, hiszen matematikai műveletet úgysem akarunk velük végezni.</p>
+					<p>A szöveges adatokat csak akkor lehet számszerű adatokká konvertálni, ha nem tartalmaznak olyan karaktert, ami a számszerű adatoknál nem megengedett. A szöveg méretét, hosszát a karakterek számával szoktuk megadni.</p>
+				</section>
+				<section>
+					<h3>Számszerű</h3>
+					<p>A számszerű adatokkal matematikai és relációs műveleteket is tudunk végezni.</p>
+					<p>A számjegyeken kívül néhány egyéb karaktert is tartalmazhatnak. Például előjelet, törtjelet, tizedes vesszőt vagy tizedes pontot, a komplex számok képzetes részét (<span class="code">i</span>) vagy a normálalak műszaki jelölését (<span class="code">E</span>).</p>
+					<p>A számszerű adatokat minden esetben könnyen szöveges adatokká lehet alakítani. Méretüket a tároláshoz szükséges byte-ok számával szoktuk megadni.</p>
+					<p>A számszerű adatokat többféle altípusba soroljuk.</p>
+					<section>
+						<h4>Szám</h4>
+						<p>A számokon belül megkülönböztetünk egészeket és tizedestörteket. Értelem szerint egész számokat tudunk tört formában tárolni, fordítva viszont adatvesztés léphet fel, mert a törtrész elveszik, és csak az egészrész marad meg.</p>
+						<h4>Dátum és idő</h4>
+						<p>A számítógép a dátumot és időt valamilyen kezdődátum óta eltelt időegység (nap, másodperc, ezredmásodperc) formájában tárolja. Például a Microsoft Excel az 1900. január 1-et tekinti kezdődátumnak. Így az 1900. február 1. megfelel a 32-es számnak.</p>
+						<p>Az idő jelölésére egyes programok tizedestörteket is használnak. Például ha az éjfél 1, akkor az adott nap dél 0,5-ként írható le.</p>
+						<h4>Logikai</h4>
+						<p>A logikai adattípus igen-nem értékeket tartalmaz. Megegyezés szerint a hamis értéket 0, az igaz értéket pedig 1 vagy -1 jelképezi.</p>
+					</section>
+				</section>
+				<section>
+					<h3>NULL érték</h3>
+					<p>Egy adatbázis létrehozásakor előfordulhat, hogy valamilyen adatot még nem ismerünk vagy nem akarunk megadni. Ebben az esetben jelölni kell, hogy az adat hiányzik. Erre szolgál a NULL érték, ami a gyakorlatban üres cellaként jelenik meg.</p>
+					<p>A NULL érték nem egy újabb adattípus. A hiányzó adat típusát mindig az adott oszlop típusa határozza meg.</p>
+					<p>Fontos, hogy a NULL érték nem egyenlő a 0-val. Például ha az a kérdés, hogy <em>"Hány könyvet olvastál el a nyári szünetben?"</em>, akkor a válasz lehet <em>"Egyet sem."</em> (0) vagy <em>"Nem tudjuk."</em> (NULL).</p>
+				</section>
+			</section>
+			<section>
 				<h2>Az adatok kezelése</h2>
 				<section>
 					<h3>Tárolás</h3>
-					<p>Az adattárolásról bővebben a <a href="../storage/index.html" target="_blank">Háttértárak</a> fejezetben olvashatsz bővebben.</p>
+					<p>Az adattárolásról a <a href="../storage/index.html" target="_blank">Háttértárak</a> fejezetben olvashatsz bővebben.</p>
 				</section>
 				<section>
 					<h3>Feldolgozás</h3>
-					<p>Az adatok feldolgozásáról bővebben a <a href="../../index.html#software" target="_blank">szoftveres</a> fejezetekben olvashatsz bővebben.</p>
+					<p>Az adatok feldolgozásáról a <a href="../../index.html#software" target="_blank">szoftveres</a> fejezetekben olvashatsz bővebben.</p>
 				</section>
 				<section>
 					<h3>Továbbítás</h3>
