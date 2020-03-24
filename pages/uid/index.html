@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- coded by Nekomajin -->
+<html lang="hu" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Felhasználó azonosítás</title>
+		<link rel="icon" href="../../icons/icon16.png" sizes="16x16" type="image/png" />
+		<link rel="stylesheet" href="../../styles/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../../styles/print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="../../styles/number.css" type="text/css" media="all" />
+		<script src="../../scripts/script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="../../index.html">Kezdőlap</a> &bullet; <a href="#" onclick="window.print();">Nyomtatás...</a>
+		</nav>
+		<article>
+			<header>
+				<h1>Felhasználó azonosítás</h1>
+				<p>Manapság különféle felhasználói fiókok és profilok tucatjaival rendelkezünk, és fontos, hogy ezek tartalmához csak mi férjünk hozzá. Ennek érdekében az adott szolgáltatás használatához valamilyen módszerrel azonosítani kell magunkat.</p>
+			</header>
+			<section>
+				<h2>Jelszó</h2>
+				<p>Napjainkban a legelterjedtebb azonosító még mindig a jelszó, noha a különféle biometrikus módszerek egyre inkább előtérbe kerülnek.</p>
+				<p>Először is tisztáznunk kell, hogy a jelszó nem feltétlenül egy szó. Valójában karaktersorozatról van szó, így idetartozik a bank- és SIM-kártyák esetében használatos PIN-kód és az okos telefonokon választható feloldó mintázat is.</p>
+				<section>
+					<h3>Az erős jelszó jellemzői</h3>
+					<ul>
+						<li>Az erős jelszó elsődleges tulajdonsága, hogy <strong>hosszú</strong>. Minél hosszabb ugyanis, annál többféle sorozatot tudunk előállítani a rendelkezésre álló karakterekből. Például egy 4 karakterből álló PIN-kódból, (amiben 10 különböző számjegyből választhatunk), csak 10 ezer (10<sup>4</sup>) különböző sorozatot lehet létrehozni, 8 karakteresből viszont már 100 milliót (10<sup>8</sup>).</li>
+						<li>A második legfontosabb, hogy <strong>sokféle karaktercsoport</strong> szerepeljen benne. Ha a számjegyek mellett az angol ábécé kis- és nagybetűit is használjuk, akkor már 62 (26+26+10) különböző karakterből választhatunk. 8 karakteres jelszó esetében már ~281 billió (64<sup>8</sup> = ~2,8×10<sup>14</sup>) különböző sorozatot lehet előállítani.</li>
+						<li>Az említett ~281 billió már elég nagynak tűnik, de a mai számítógépek, különféle optimalizációs trükköket használva, még ennyi variációt is viszonylag rövid idő alatt ki tudnak próbálni. Ha még erősebb jelszót akarunk, akkor vagy újabb karaktercsoportokat kell bevonni, vagy a jelszó hosszát kell növelni.
+							<ul>
+								<li>Ha az adott szolgáltatás külön nem kéri, akkor ékezetes magánhangzókat és írásjeleket nem célszerű használni, mert nem biztos, hogy a rendszer megfelelően kezelni tudja azokat.</li>
+								<li>A karakterszámot viszont könnyen tudjuk növelni. 12 karakteres jelszó esetében már ~4,7 trilliárd (64<sup>12</sup> = ~4,7×10<sup>21</sup>) különböző sorozatot lehet előállítani, amit a mai számítógépek csak több száz vagy ezer év alatt tudnak végigpróbálni.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Jelszókészítés</h3>
+					<p>Ugyanakkor egy erős jelszó mit sem ér akkor, ha nem tudjuk megjegyezni, vagy ha mások könnyen kitalálhatják.</p>
+					<p>A fenti feltételek szerint hiába számít erős jelszónak a "Jelszo1234", mert a feltörést végző programok nem ábécé sorrendben próbálják ki a variációkat, hanem bizonyos gyakori sorozatokat előre vesznek.</p>
+					<p>A számítógépnek pedig mindegy, hogy a jelszavunk értelmes karaktersorozat-e, nekünk viszont nem. Ráadásul az sem célszerű, ha minden szolgáltatásnál ugyanazt a jelszót használjuk, mert ha az egyiket valamilyen módon feltörik, akkor a többi fiókunkba is be tudnak lépni.</p>
+					<p>Hogyan lehet akkor olyan jelszót készíteni, ami megfelel a fenti feltételeknek, azaz erős, egyedi és mégis könnyen megjegyezhető? Erre többféle megoldás is létezik. Például:</p>
+					<ol>
+						<li>Válasszunk egy számunkra kedves sort egy könyvből, versből vagy dalszövegből! Legyen legalább 10-12 karakter hosszú! Pl.: <span class="code">Viszlát, és kösz a halakat!</span> (<em>Galaxis útikalauz stopposoknak</em>, ha valakit érdekel. ;)</li>
+						<li>Írjuk le írásjelek, szóközök és ékezetek nélkül, csupa kisbetűvel! Pl.: <span class="code">viszlateskoszahalakat</span></li>
+						<li>Minden szó valahányadik (pl.: harmadik) betűjét cseréljük nagybetűre! Ha egy szó rövidebb, abban ne cseréljünk ki semmit! Pl.: <span class="code">viSzlateskoSzahaLakat</span></li>
+						<li>Az eredeti szöveg egy vagy két szavának helyére írjuk azt a számot, ahányadik szót kicseréltük Pl.: <span class="code">viSzlat2koSz4haLakat</span></li>
+						<li>Válasszunk az adott szolgáltatáshoz egy 2-3 karakterből álló rövidítést (pl.: fb, gm, ig)! Ezt illesszük be csupa nagybetűvel valamelyik szó helyére vagy a szöveg végére.  Pl.: <span class="code">viSzlat2koSz4haLakatFB</span></li>
+					</ol>
+					<p>Bár ez a jelszó első ránézésre túl bonyolultnak tűnik, ha az eredeti idézetet és ezt a 4-5 lépést megjegyezzük, bármikor újra elő tudjuk állítani. A begépelés az első néhány alkalommal nagy odafigyelést igényel, de idővel kialakul az izommemória, és már nem fog problémát okozni, hogy gyorsan és hiba nélkül beírjuk.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Biometrikus módszerek</h2>
+				<p>Az utóbbi években robbanásszerű fejlődésnek indult a biometrikus azonosítás. A kifejezés az élő szervezet (bio = élő) valamilyen mérhető (meter = mérőeszköz) tulajdonságára utal. Fontos, hogy ez a tulajdonság a gének szintjén legyen kódolva, azaz mindenkinél különböző legyen.</p>
+				<p>A gyakorlatban a legelterjedtebb az ujjlenyomat- és arcfelismerés. Ipari környezetben használják a teljes tenyér, illetve a szem szivárványhártyájának és retinájának a mintázatát is. Tágabb értelemben ide tartozik a DNS vizsgálat is, de a mai technológiával ez még napokat vesz igénybe, ezért egy ajtó kinyitására vagy egy telefon feloldására nem alkalmas.</p>
+				<p>A biometrikus módszerek közös tulajdonsága, hogy a vizsgált testrészt nagy felbontásban beszkennelik. A szem esetén a hajszálérhálózatot, a kéz esetén az erek mellett a bőrléceket vizsgálják, az arc esetén pedig előre meghatározott pontok távolságát és az azokat összekötő vonalak által bezárt szögeket számolnak.</p>
+				<p>Az azonosításkor a szkennelt mintát több ezer ponton összehasonlítják a tárolt mintával. Ráadásul a statisztikai adatok alapján ezt igen jó hatékonysággal teszik, vagyis tényleg alkalmasak egy személy felismerésére. A kérdés inkább az, hogy egy élő embert meg tudnak-e különböztetni egy mesterségesen előállított mintától. Az arcfelismerés esetén például alapvetőe fontos, hogy a program egy valódi arcot meg tudjon különböztetni egy fényképtől. A jelenleg piacon lévő megoldások többnyire már ezekkel a problémákkal is meg tudnak küzdeni.</p>
+			</section>
+			<section>
+				<h2>Chipek</h2>
+				<p>Ipari és vállalati környezetben a mai napig elterjedtek a különböző "kártyás" megoldások. Ezek eleinte mágnescsíkot tartalmaztak, manapság pedig egy sokkal biztonságosabb RFID <em>(Radio-frequency identification)</em> chip található rajtuk. A chipbe ágyazott apró rádióadó elektromágneses tér hatására energiához jut, és egy előre beprogramozott egyedi kódot kezd sugározni, ami alkalmas egy személy azonosítására.</p>
+				<p>A biometrikus módszerek ezeket a beléptető kártyákat kezdik kiszorítani, viszont például az érintéses (NFC) bankkártyák és a bolti lopásgátlók továbbra is RFID módszerrel működnek, és a magyarországi személyi- és diákigazolványokon is ilyen chip van.</p>
+			</section>
+			<section>
+				<h2>Többlépcsős azonosítás</h2>
+				<p>A fentiekben többféle különböző módszert láttunk, ám egyik sem 100%-ig biztonságos. Éppen ezért egyre több szolgáltatás kínálja fel, vagy követeli meg a kétlépcsős azonosítást.</p>
+				<p>Ennek a legegyszerűbb formája a jelszó beírása után emailben vagy SMS-ben küldött egyedi kód. Ez a módszer azon alapul, hogy a fiókot feltörni próbáló személynek még az email fiókhoz vagy a telefonhoz is hozzá kell férni a számítógépen kívül.</p>
+				<p>Egyre inkább terjed viszont egy kényelmesebb megoldás, ami csak az első alkalommal küld egyedi kódot, a továbbiakban viszont már a számítógép vagy okos telefon eszközazonosító számát kéri le. Csak akkor küld újra egyedi kódot, ha egy másik eszközről akarunk bejelentkezni.</p>
+			</section>
+		</article>
+		<footer>
+			<button type="button" id="up">Ugrás a lap tetejére</button>
+		</footer>
+	</body>
+</html>
